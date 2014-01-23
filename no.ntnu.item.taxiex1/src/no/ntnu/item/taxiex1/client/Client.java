@@ -7,7 +7,7 @@ import no.ntnu.item.arctis.runtime.Block;
 public class Client extends Block {
 
 	public Order createOrder() {
-		return new Order("Order!");
+		return new Order(null, "Order!");
 	}
 
 	public String handleAck(Ack ack) {

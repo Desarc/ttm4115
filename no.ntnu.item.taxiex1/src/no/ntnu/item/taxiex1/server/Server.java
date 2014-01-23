@@ -7,19 +7,19 @@ import no.ntnu.item.arctis.runtime.Block;
 public class Server extends Block {
 
 	boolean alt = false;
-	
-	public Ack createAck(String message) {
-		if (alt) {
-			alt = false;
-			return new Ack("Ok");
-		} else {
-			alt = true;
-			return new Ack("Not Ok");
-		}
+
+	public String displayOrder(Order order) {
+		return order.alias+": "+order.message;
 	}
 
-	public String handleOrder(Order order) {
-		return order.message;
+	public Ack handleOrder(container.Order order) {
+		if (alt) {
+			alt = false;
+			return new Ack(order.alias, "Ok");
+		} else {
+			alt = true;
+			return new Ack(order.alias, "Not Ok");
+		}
 	}
 
 }

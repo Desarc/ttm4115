@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    version="1.0.0" 
+    uuid="_NTOREIQyEeODF9elR9K5-g" 
+    >
+    <dependencies>
+        <dependency name="com.bitreactive.library.counter" uuid="_gw5scEzzEeG_68vz5_hEdQ" version="1.2.0"/>
+        <dependency name="no.ntnu.item.taxiex1" uuid="_8NnA0IK5EeOHFPexAm9Akg" version="1.0.0"/>
+        <dependency name="no.ntnu.item.ttm4115.clientgui" uuid="_aN0DwIQoEeOlHJiOzRtRDg" version="1.0.0"/>
+    </dependencies>
+</project>
