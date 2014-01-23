@@ -4,8 +4,11 @@ import no.ntnu.item.arctis.runtime.Block;
 
 public class Component extends Block {
 
-	public int setCount() {
-		return 3;
+	int counter = 0;
+	
+	public String createAlias() {
+		counter++;
+		return "Client"+counter;	
 	}
 
 }
