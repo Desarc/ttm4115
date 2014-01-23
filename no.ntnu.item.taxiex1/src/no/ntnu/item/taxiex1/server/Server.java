@@ -9,7 +9,11 @@ public class Server extends Block {
 	boolean alt = false;
 
 	public String displayOrder(Order order) {
-		return order.alias+": "+order.message;
+		if (order.alias != null) {
+			return order.alias+": "+order.message;
+		} else {
+			return order.message;
+		}
 	}
 
 	public Ack handleOrder(container.Order order) {
