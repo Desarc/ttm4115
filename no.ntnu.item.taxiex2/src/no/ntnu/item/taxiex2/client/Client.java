@@ -14,7 +14,7 @@ public class Client extends Block {
 	}
 	
 	public static String getAlias(Ack ack) {
-		return ack.alias;
+		return ack.getAlias();
 	}
 	
 	public Order createOrder() {
@@ -22,6 +22,6 @@ public class Client extends Block {
 	}
 
 	public String handleAck(Ack ack) {
-		return ack.result;
+		return ack.getResult();
 	}
 }

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arctis="http:///schemas/arctis/_WFTqUHjGEdyxtoUMycQn9Q/10" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:graphics="http:///schemas/graphics/_gd9EwIuAEdytfOWtpACIqw/6" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/arctis/_WFTqUHjGEdyxtoUMycQn9Q/10 pathmap://ARCTIS_PROFILES/arctis.profile.uml#_WFTqUXjGEdyxtoUMycQn9Q http:///schemas/graphics/_gd9EwIuAEdytfOWtpACIqw/6 pathmap://RAMSES_GRAPHIC_PROFILES/no.ntnu.item.ramses.graphicprofile.uml#_geG1wIuAEdytfOWtpACIqw">
+  <uml:Package xmi:id="_dzvRwJS0EeOzs7hpNEuEjQ" name="no.ntnu.item.semesterassignment">
+    <packagedElement xmi:type="uml:Collaboration" xmi:id="_dzv40pS0EeOzs7hpNEuEjQ" name="TaxiSystem" classifierBehavior="_d15N4ZS0EeOzs7hpNEuEjQ" collaborationRole="_d17qIJS0EeOzs7hpNEuEjQ">
+      <ownedAttribute xmi:id="_d17qIJS0EeOzs7hpNEuEjQ" name="component"/>
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_d15N4ZS0EeOzs7hpNEuEjQ" name="TaxiSystem" group="_d184QZS0EeOzs7hpNEuEjQ" partition="_d184QZS0EeOzs7hpNEuEjQ" node="_idE0YJS0EeOzs7hpNEuEjQ _Fe5_cJS1EeOzs7hpNEuEjQ">
+        <group xmi:type="uml:ActivityPartition" xmi:id="_d184QZS0EeOzs7hpNEuEjQ" name="component" node="_idE0YJS0EeOzs7hpNEuEjQ _Fe5_cJS1EeOzs7hpNEuEjQ"/>
+        <node xmi:type="uml:CallBehaviorAction" xmi:id="_idE0YJS0EeOzs7hpNEuEjQ" name="c0" inPartition="_d184QZS0EeOzs7hpNEuEjQ" behavior="_fmCV0ZS0EeOzs7hpNEuEjQ"/>
+        <node xmi:type="uml:CallBehaviorAction" xmi:id="_Fe5_cJS1EeOzs7hpNEuEjQ" name="c1" inPartition="_d184QZS0EeOzs7hpNEuEjQ" behavior="_C3kJwZS1EeOzs7hpNEuEjQ"/>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ifLtMZS0EeOzs7hpNEuEjQ" name="no.ntnu.item.semesterassignment">
+      <packagedElement xmi:type="uml:Activity" xmi:id="_fmCV0ZS0EeOzs7hpNEuEjQ" name="Taxi" classifierBehavior="_ifM7UJS0EeOzs7hpNEuEjQ" group="_ifMUQZS0EeOzs7hpNEuEjQ" partition="_ifMUQZS0EeOzs7hpNEuEjQ">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_ifM7UJS0EeOzs7hpNEuEjQ" name="Taxi">
+          <region xmi:id="_ifNiYJS0EeOzs7hpNEuEjQ" name="&lt;region>">
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_ifNiYZS0EeOzs7hpNEuEjQ" name="&lt;initial>"/>
+          </region>
+        </ownedBehavior>
+        <group xmi:type="uml:ActivityPartition" xmi:id="_ifMUQZS0EeOzs7hpNEuEjQ" name="main"/>
+      </packagedElement>
+      <profileApplication xmi:id="_ifM7UZS0EeOzs7hpNEuEjQ">
+        <eAnnotations xmi:id="_ifM7UpS0EeOzs7hpNEuEjQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="pathmap://ARCTIS_PROFILES/arctis.profile.uml#_WFTqUXjGEdyxtoUMycQn9Q"/>
+        </eAnnotations>
+        <appliedProfile href="pathmap://ARCTIS_PROFILES/arctis.profile.uml#_rE77YK4iEduZSuTiwKs5Lw"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Fe9p0JS1EeOzs7hpNEuEjQ" name="no.ntnu.item.semesterassignment">
+      <packagedElement xmi:type="uml:Activity" xmi:id="_C3kJwZS1EeOzs7hpNEuEjQ" name="MQTT" classifierBehavior="_Fe-Q4pS1EeOzs7hpNEuEjQ" group="_Fe-Q4ZS1EeOzs7hpNEuEjQ" partition="_Fe-Q4ZS1EeOzs7hpNEuEjQ">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_Fe-Q4pS1EeOzs7hpNEuEjQ" name="MQTT">
+          <region xmi:id="_Fe-385S1EeOzs7hpNEuEjQ" name="&lt;region>">
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_Fe-39JS1EeOzs7hpNEuEjQ" name="&lt;initial>"/>
+          </region>
+        </ownedBehavior>
+        <group xmi:type="uml:ActivityPartition" xmi:id="_Fe-Q4ZS1EeOzs7hpNEuEjQ" name="main"/>
+      </packagedElement>
+      <profileApplication xmi:id="_Fe-38JS1EeOzs7hpNEuEjQ">
+        <eAnnotations xmi:id="_Fe-38ZS1EeOzs7hpNEuEjQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="pathmap://ARCTIS_PROFILES/arctis.profile.uml#_WFTqUXjGEdyxtoUMycQn9Q"/>
+        </eAnnotations>
+        <appliedProfile href="pathmap://ARCTIS_PROFILES/arctis.profile.uml#_rE77YK4iEduZSuTiwKs5Lw"/>
+      </profileApplication>
+    </packagedElement>
+    <profileApplication xmi:id="_dzv40JS0EeOzs7hpNEuEjQ">
+      <eAnnotations xmi:id="_dzv40ZS0EeOzs7hpNEuEjQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://ARCTIS_PROFILES/arctis.profile.uml#_WFTqUXjGEdyxtoUMycQn9Q"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://ARCTIS_PROFILES/arctis.profile.uml#_rE77YK4iEduZSuTiwKs5Lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_d18RMJS0EeOzs7hpNEuEjQ">
+      <eAnnotations xmi:id="_d18RMZS0EeOzs7hpNEuEjQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://RAMSES_GRAPHIC_PROFILES/no.ntnu.item.ramses.graphicprofile.uml#_geG1wIuAEdytfOWtpACIqw"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://RAMSES_GRAPHIC_PROFILES/no.ntnu.item.ramses.graphicprofile.uml#_UEANMUVlEduH9aQE_pc66w"/>
+    </profileApplication>
+  </uml:Package>
+  <arctis:system xmi:id="_d15N4JS0EeOzs7hpNEuEjQ" base_Collaboration="_dzv40pS0EeOzs7hpNEuEjQ"/>
+  <arctis:system xmi:id="_d1508JS0EeOzs7hpNEuEjQ" base_Activity="_d15N4ZS0EeOzs7hpNEuEjQ"/>
+  <graphics:Shape xmi:id="_d184QJS0EeOzs7hpNEuEjQ" x="250" y="220" width="120" height="70" base_Element="_d17qIJS0EeOzs7hpNEuEjQ"/>
+  <graphics:Shape xmi:id="_d19fUJS0EeOzs7hpNEuEjQ" x="180" y="55" width="613" height="54" base_Element="_d15N4ZS0EeOzs7hpNEuEjQ"/>
+  <graphics:Shape xmi:id="_d1-tcJS0EeOzs7hpNEuEjQ" x="180" y="108" width="613" height="415" base_Element="_d184QZS0EeOzs7hpNEuEjQ"/>
+  <graphics:Shape xmi:id="_ifLtMJS0EeOzs7hpNEuEjQ" x="216" y="234" width="198" height="108" aux1="multi" base_Element="_idE0YJS0EeOzs7hpNEuEjQ"/>
+  <arctis:esm xmi:id="_ifM7U5S0EeOzs7hpNEuEjQ" base_StateMachine="_ifM7UJS0EeOzs7hpNEuEjQ"/>
+  <arctis:esm xmi:id="_Fe-38pS1EeOzs7hpNEuEjQ" base_StateMachine="_Fe-Q4pS1EeOzs7hpNEuEjQ"/>
+  <graphics:Shape xmi:id="_FfAGEJS1EeOzs7hpNEuEjQ" x="504" y="234" width="198" height="108" base_Element="_Fe5_cJS1EeOzs7hpNEuEjQ"/>
+</xmi:XMI>
