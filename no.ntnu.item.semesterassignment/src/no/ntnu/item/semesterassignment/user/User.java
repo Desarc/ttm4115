@@ -37,9 +37,29 @@ public class User extends Block {
 			return ((UserReply)reply).getMessage();
 		}
 		catch (ClassCastException cce) {
-			return "";
+			return "invalid message type";
 		}
 		
+	}
+
+	public void publishOK() {
+		System.out.println("Publish OK.");
+	}
+
+	public void publishNOK() {
+		System.out.println("Publish not OK.");
+	}
+
+	public void connected() {
+		System.out.println("Connected.");
+	}
+
+	public void connectionLost() {
+		System.out.println("Connection lost.");
+	}
+
+	public void startFailed() {
+		System.out.println("Start failed.");
 	}
 
 }

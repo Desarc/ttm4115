@@ -22,6 +22,9 @@
           <argument xmi:type="uml:ValuePin" xmi:id="_-jK_gJV8EeOAvbU2bIO-iA" name="prefix" type="_0u5wcJV5EeOAvbU2bIO-iA">
             <value xmi:type="uml:LiteralString" xmi:id="_-jMNoJV8EeOAvbU2bIO-iA" name="prefix" type="_0u5wcJV5EeOAvbU2bIO-iA" value="user_"/>
           </argument>
+          <argument xmi:type="uml:ValuePin" xmi:id="_AUfVsJWJEeOAvbU2bIO-iA" name="instances" type="_p4HFs5V8EeOAvbU2bIO-iA">
+            <value xmi:type="uml:LiteralInteger" xmi:id="_AUf8wJWJEeOAvbU2bIO-iA" name="instances" type="_p4HFs5V8EeOAvbU2bIO-iA" value="1"/>
+          </argument>
           <result xmi:id="_p4NzYJV8EeOAvbU2bIO-iA" name="create" inPartition="_b-SzEJS0EeOzs7hpNEuEjQ" outgoing="_z8TugJV8EeOAvbU2bIO-iA" type="_0u5wcJV5EeOAvbU2bIO-iA"/>
           <result xmi:id="_p4QPoJV8EeOAvbU2bIO-iA" name="end" inPartition="_b-SzEJS0EeOzs7hpNEuEjQ"/>
         </node>

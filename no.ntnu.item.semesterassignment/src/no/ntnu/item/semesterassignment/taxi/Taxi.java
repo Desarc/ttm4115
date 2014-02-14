@@ -38,5 +38,37 @@ public class Taxi extends Block {
 	public TaxiMessage generateOffDuty() {
 		return new TaxiMessage(this.alias_taxi, TaxiMessage.offDuty, "");
 	}
+	
+	public TaxiMessage generateAvailable() {
+		return new TaxiMessage(this.alias_taxi, TaxiMessage.available, "");
+	}
+	
+	public TaxiMessage generateUnavailable() {
+		return new TaxiMessage(this.alias_taxi, TaxiMessage.unavailable, "");
+	}
+	
+	public TaxiMessage generateConfirm() {
+		return new TaxiMessage(this.alias_taxi, TaxiMessage.confirm, "");
+	}
+	
+	public void publishOK() {
+		System.out.println("Publish OK.");
+	}
+
+	public void publishNOK() {
+		System.out.println("Publish not OK.");
+	}
+
+	public void connected() {
+		System.out.println("Connected.");
+	}
+
+	public void connectionLost() {
+		System.out.println("Connection lost.");
+	}
+
+	public void startFailed() {
+		System.out.println("Start failed.");
+	}
 
 }

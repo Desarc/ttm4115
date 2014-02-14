@@ -22,6 +22,9 @@
           <argument xmi:type="uml:ValuePin" xmi:id="_jx1RsJWBEeOAvbU2bIO-iA" name="prefix" type="_tlR8AJVxEeOAvbU2bIO-iA">
             <value xmi:type="uml:LiteralString" xmi:id="_jx14wJWBEeOAvbU2bIO-iA" name="prefix" type="_tlR8AJVxEeOAvbU2bIO-iA" value="taxi_"/>
           </argument>
+          <argument xmi:type="uml:ValuePin" xmi:id="_BwxGcJWJEeOAvbU2bIO-iA" name="instances" type="_iCxH05WBEeOAvbU2bIO-iA">
+            <value xmi:type="uml:LiteralInteger" xmi:id="_BwyUkJWJEeOAvbU2bIO-iA" name="instances" type="_iCxH05WBEeOAvbU2bIO-iA" value="1"/>
+          </argument>
           <result xmi:id="_iFE08JWBEeOAvbU2bIO-iA" name="create" inPartition="_d184QZS0EeOzs7hpNEuEjQ" outgoing="_lsYS0JWBEeOAvbU2bIO-iA" type="_tlR8AJVxEeOAvbU2bIO-iA"/>
           <result xmi:id="_iFGDEJWBEeOAvbU2bIO-iA" name="end" inPartition="_d184QZS0EeOzs7hpNEuEjQ"/>
         </node>
