@@ -1,7 +1,7 @@
 package no.ntnu.item.semesterassignment.user;
 
 import com.bitreactive.library.mqtt.MQTTConfigParam;
-import com.bitreactive.library.mqtt.mqttstm.MQTTSTM.Message;
+import com.bitreactive.library.mqtt.mqtt.MQTT.Message;
 
 import container.UserReply;
 import container.UserRequest;
@@ -29,6 +29,7 @@ public class User extends Block {
 	}
 
 	public UserRequest generateRequest(String address) {
+		System.out.println("Generating new request for taxi to "+address);
 		return new UserRequest(this.user_alias, "", address);
 	}
 

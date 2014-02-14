@@ -1,7 +1,7 @@
 package no.ntnu.item.semesterassignment.taxi;
 
 import com.bitreactive.library.mqtt.MQTTConfigParam;
-import com.bitreactive.library.mqtt.mqttstm.MQTTSTM.Message;
+import com.bitreactive.library.mqtt.mqtt.MQTT.Message;
 
 import container.TaxiMessage;
 import no.ntnu.item.arctis.runtime.Block;
@@ -28,7 +28,11 @@ public class Taxi extends Block {
 	}
 
 	public String readMessage(Object message) {
-		return ((TaxiMessage)message).getMessage();
+		try {
+			return ((TaxiMessage)message).getMessage();
+		} catch (ClassCastException cce) {
+			return "invalid message type";
+		}
 	}
 
 	public TaxiMessage generateOnDuty() {
