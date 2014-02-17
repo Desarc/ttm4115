@@ -3,8 +3,7 @@ package no.ntnu.item.semesterassignment.user;
 import com.bitreactive.library.mqtt.MQTTConfigParam;
 import com.bitreactive.library.mqtt.mqtt.MQTT.Message;
 
-import container.UserReply;
-import container.UserRequest;
+import container.TaxiMessage;
 import no.ntnu.item.arctis.runtime.Block;
 
 public class User extends Block {
@@ -25,17 +24,18 @@ public class User extends Block {
 	}
 
 	public String toString(Message message) {
+		System.out.println("Message received...");
 		return message.getPayload().toString();
 	}
 
-	public UserRequest generateRequest(String address) {
+	public TaxiMessage generateRequest(String address) {
 		System.out.println("Generating new request for taxi to "+address);
-		return new UserRequest(this.user_alias, "", address);
+		return new TaxiMessage(this.user_alias, TaxiMessage.DISPATCHER, TaxiMessage.taxiRequest, address);
 	}
 
-	public String readReply(Object reply) {
+	public String readMessage(Object message) {
 		try {
-			return ((UserReply)reply).getMessage();
+			return ""+((TaxiMessage)message).getType();
 		}
 		catch (ClassCastException cce) {
 			return "invalid message type";
@@ -61,6 +61,14 @@ public class User extends Block {
 
 	public void startFailed() {
 		System.out.println("Start failed.");
+	}
+	
+	public void deserializeError() {
+		System.out.println("Deserialize error.");
+	}
+
+	public String taxiRequested(String address) {
+		return "Taxi requested to "+address;
 	}
 
 }

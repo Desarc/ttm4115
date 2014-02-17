@@ -19,6 +19,7 @@ public class Taxi extends Block {
 	}
 	
 	public String toString(Message message) {
+		System.out.println("Message received...");
 		return message.getPayload().toString();
 	}
 
@@ -29,30 +30,30 @@ public class Taxi extends Block {
 
 	public String readMessage(Object message) {
 		try {
-			return ((TaxiMessage)message).getMessage();
+			return ((TaxiMessage)message).getData1();
 		} catch (ClassCastException cce) {
 			return "invalid message type";
 		}
 	}
 
 	public TaxiMessage generateOnDuty() {
-		return new TaxiMessage(this.alias_taxi, TaxiMessage.onDuty, "");
+		return new TaxiMessage(this.alias_taxi, TaxiMessage.DISPATCHER, TaxiMessage.onDuty);
 	}
 	
 	public TaxiMessage generateOffDuty() {
-		return new TaxiMessage(this.alias_taxi, TaxiMessage.offDuty, "");
+		return new TaxiMessage(this.alias_taxi, TaxiMessage.DISPATCHER, TaxiMessage.offDuty);
 	}
 	
 	public TaxiMessage generateAvailable() {
-		return new TaxiMessage(this.alias_taxi, TaxiMessage.available, "");
+		return new TaxiMessage(this.alias_taxi, TaxiMessage.DISPATCHER, TaxiMessage.available);
 	}
 	
 	public TaxiMessage generateUnavailable() {
-		return new TaxiMessage(this.alias_taxi, TaxiMessage.unavailable, "");
+		return new TaxiMessage(this.alias_taxi, TaxiMessage.DISPATCHER, TaxiMessage.unavailable);
 	}
 	
 	public TaxiMessage generateConfirm() {
-		return new TaxiMessage(this.alias_taxi, TaxiMessage.confirm, "");
+		return new TaxiMessage(this.alias_taxi, TaxiMessage.DISPATCHER, TaxiMessage.confirm);
 	}
 	
 	public void publishOK() {
@@ -73,6 +74,10 @@ public class Taxi extends Block {
 
 	public void startFailed() {
 		System.out.println("Start failed.");
+	}
+
+	public void deserializeError() {
+		System.out.println("Deserialize error.");
 	}
 
 }
