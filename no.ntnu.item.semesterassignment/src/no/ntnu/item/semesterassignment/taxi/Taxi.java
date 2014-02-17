@@ -1,8 +1,8 @@
 package no.ntnu.item.semesterassignment.taxi;
 
+import java.nio.charset.Charset;
 import java.util.UUID;
 
-import com.bitreactive.library.mqtt.MQTTConfigParam;
 import com.bitreactive.library.mqtt.mqtt.MQTT;
 import com.bitreactive.library.mqtt.mqtt.MQTT.Message;
 
@@ -18,22 +18,16 @@ public class Taxi extends Block {
 	}
 
 	public Message toBytes(String text) {
-		return new Message(text.getBytes());
+		return new Message(text.getBytes(Charset.forName("UTF-8")));
 	}
 	
 	public String toString(Message message) {
-		System.out.println("Message received...");
-		return message.getPayload().toString();
-	}
-
-	public MQTTConfigParam generateMQTTParam() {
-		MQTTConfigParam param = new MQTTConfigParam("broker.mqttdashboard.com", "generic-map-ui-studass");
-		return param;
+		return new String(message.getPayload());
 	}
 
 	public String readMessage(Object message) {
 		try {
-			return ((TaxiMessage)message).getData1();
+			return ""+((TaxiMessage)message).getType();
 		} catch (ClassCastException cce) {
 			return "invalid message type";
 		}
@@ -79,8 +73,8 @@ public class Taxi extends Block {
 		System.out.println("Start failed.");
 	}
 
-	public void deserializeError() {
-		System.out.println("Deserialize error.");
+	public void deserializeError(String error) {
+		System.out.println("Deserialize error: "+error);
 	}
 
 	public void configureMQTT() {

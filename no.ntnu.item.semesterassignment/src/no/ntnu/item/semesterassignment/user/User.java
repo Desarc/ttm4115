@@ -1,8 +1,8 @@
 package no.ntnu.item.semesterassignment.user;
 
+import java.nio.charset.Charset;
 import java.util.UUID;
 
-import com.bitreactive.library.mqtt.MQTTConfigParam;
 import com.bitreactive.library.mqtt.mqtt.MQTT;
 import com.bitreactive.library.mqtt.mqtt.MQTT.Message;
 
@@ -18,17 +18,11 @@ public class User extends Block {
 	}
 
 	public Message toBytes(String text) {
-		return new Message(text.getBytes());
-	}
-
-	public MQTTConfigParam getMQTTParam() {
-		MQTTConfigParam param = new MQTTConfigParam("broker.mqttdashboard.com", "generic-map-ui-studass");
-		return param;
+		return new Message(text.getBytes(Charset.forName("UTF-8")));
 	}
 
 	public String toString(Message message) {
-		System.out.println("Message received...");
-		return message.getPayload().toString();
+		return new String(message.getPayload());
 	}
 
 	public TaxiMessage generateRequest(String address) {

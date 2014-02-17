@@ -98,7 +98,13 @@
         <result xmi:id="_l4zQIJV_EeOAvbU2bIO-iA" name="" inPartition="_euaKQJS0EeOzs7hpNEuEjQ" outgoing="_mexD8JV_EeOAvbU2bIO-iA" type="_f5i54JfkEeOGi-ickgFkyw"/>
       </node>
       <node xmi:type="uml:CallBehaviorAction" xmi:id="_wxw9wJV_EeOAvbU2bIO-iA" name="c3" inPartition="_euaKQJS0EeOzs7hpNEuEjQ" behavior="_eOnYsVtTEeGtaPY7WHS-jQ">
+        <ownedComment xmi:id="_2MHcsJfnEeOGi-ickgFkyw">
+          <body>GENERICS:T:java.lang.Object;</body>
+        </ownedComment>
         <argument xmi:id="_wx4SgJV_EeOAvbU2bIO-iA" name="json" inPartition="_euaKQJS0EeOzs7hpNEuEjQ" incoming="_2Nsa8JV_EeOAvbU2bIO-iA" type="_ZXwZI5V5EeOAvbU2bIO-iA"/>
+        <argument xmi:type="uml:ValuePin" xmi:id="_2MGOkJfnEeOGi-ickgFkyw" name="targetClass" type="_ZXwZI5V5EeOAvbU2bIO-iA">
+          <value xmi:type="uml:LiteralString" xmi:id="_S5MsMJfoEeOGi-ickgFkyw" name="targetClass" type="_ZXwZI5V5EeOAvbU2bIO-iA" value="container.TaxiMessage"/>
+        </argument>
         <result xmi:id="_wx5goJV_EeOAvbU2bIO-iA" name="ok" inPartition="_euaKQJS0EeOzs7hpNEuEjQ" outgoing="_9eSTsJV_EeOAvbU2bIO-iA" type="_lbMjkJV-EeOAvbU2bIO-iA"/>
         <result xmi:id="_wx6HsJV_EeOAvbU2bIO-iA" name="error" inPartition="_euaKQJS0EeOzs7hpNEuEjQ" outgoing="_WCiPIJWMEeOAvbU2bIO-iA" type="_ZXwZI5V5EeOAvbU2bIO-iA"/>
       </node>
