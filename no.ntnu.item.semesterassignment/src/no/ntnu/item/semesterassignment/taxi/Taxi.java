@@ -1,6 +1,9 @@
 package no.ntnu.item.semesterassignment.taxi;
 
+import java.util.UUID;
+
 import com.bitreactive.library.mqtt.MQTTConfigParam;
+import com.bitreactive.library.mqtt.mqtt.MQTT;
 import com.bitreactive.library.mqtt.mqtt.MQTT.Message;
 
 import container.TaxiMessage;
@@ -78,6 +81,15 @@ public class Taxi extends Block {
 
 	public void deserializeError() {
 		System.out.println("Deserialize error.");
+	}
+
+	public void configureMQTT() {
+		setProperty(MQTT.P_MQTT_SERVER, "broker.mqttdashboard.com");
+		setProperty(MQTT.P_MQTT_PORT, "1883");    
+		setProperty(MQTT.P_MQTT_TOPIC_PUBLISH, "generic-map-ui-studass");
+		setProperty(MQTT.P_MQTT_TOPIC_SUBSCRIBE,"generic-map-ui-studass");
+		String clientID = UUID.randomUUID().toString().substring(0, 20);
+		setProperty(MQTT.P_MQTT_CLIENT_ID, clientID);
 	}
 
 }
