@@ -20,6 +20,7 @@
           <transition xmi:id="_zhGXUJjsEeOzNYifXAaq3w" name=" / connectionLost" source="_KzR50JjsEeOzNYifXAaq3w" target="_zhG-YZjsEeOzNYifXAaq3w"/>
           <transition xmi:id="_39XHQJjsEeOzNYifXAaq3w" name="setPublishTopic / " source="_FeOgsJjsEeOzNYifXAaq3w" target="_FeOgsJjsEeOzNYifXAaq3w"/>
           <transition xmi:id="_5zQR4JjsEeOzNYifXAaq3w" name="addSubscribeTopic / " source="_FeOgsJjsEeOzNYifXAaq3w" target="_FeOgsJjsEeOzNYifXAaq3w"/>
+          <transition xmi:id="_rCMQUJj3EeOzNYifXAaq3w" name=" / message; setPublishTopic" source="_FeOgsJjsEeOzNYifXAaq3w" target="_FeOgsJjsEeOzNYifXAaq3w"/>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_rsfYspiCEeOU-MmdO5Mh7A" name="&lt;initial>"/>
           <subvertex xmi:type="uml:State" xmi:id="_AcQboJjsEeOzNYifXAaq3w" name="connecting"/>
           <subvertex xmi:type="uml:State" xmi:id="_FeOgsJjsEeOzNYifXAaq3w" name="connected"/>
@@ -379,4 +380,5 @@
   <arctis:event xmi:id="_zhG-YJjsEeOzNYifXAaq3w" base_Transition="_zhGXUJjsEeOzNYifXAaq3w" effects="_bN4ggJjrEeOzNYifXAaq3w"/>
   <arctis:event xmi:id="_39XHQZjsEeOzNYifXAaq3w" base_Transition="_39XHQJjsEeOzNYifXAaq3w" triggers="_uIDIoJjkEeO5horfgX95HA"/>
   <arctis:event xmi:id="_5zQ48JjsEeOzNYifXAaq3w" base_Transition="_5zQR4JjsEeOzNYifXAaq3w" triggers="_GAG2cJiDEeOU-MmdO5Mh7A"/>
+  <arctis:event xmi:id="_rCM3YJj3EeOzNYifXAaq3w" base_Transition="_rCMQUJj3EeOzNYifXAaq3w" effects="_jGsVoJiEEeOU-MmdO5Mh7A _uIDIoJjkEeO5horfgX95HA"/>
 </xmi:XMI>

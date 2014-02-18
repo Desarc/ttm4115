@@ -11,17 +11,19 @@ import no.ntnu.item.arctis.runtime.Block;
 
 public class TaxiMQTT extends Block {
 	
+	private String baseTopic;
 	private String subscribeTopics;
 	private String publishTopic;
 	// Instance parameter. Edit only in overview page.
 	public final java.lang.String groupId;
 	
 	public void configureMQTT() {
-		subscribeTopics = "generic-map-ui-"+groupId;
-		publishTopic = "generic-map-ui-"+groupId;
+		baseTopic = "generic-map-ui-"+groupId;
+		subscribeTopics = baseTopic;
+		publishTopic = baseTopic;
 		setProperty(MQTT.P_MQTT_SERVER, "broker.mqttdashboard.com");
 		setProperty(MQTT.P_MQTT_PORT, "1883");    
-		setProperty(MQTT.P_MQTT_TOPIC_PUBLISH, "generic-map-ui-"+groupId);
+		setProperty(MQTT.P_MQTT_TOPIC_PUBLISH, publishTopic);
 		setProperty(MQTT.P_MQTT_TOPIC_SUBSCRIBE, subscribeTopics);
 		String clientID = UUID.randomUUID().toString().substring(0, 20);
 		setProperty(MQTT.P_MQTT_CLIENT_ID, clientID);
@@ -37,15 +39,15 @@ public class TaxiMQTT extends Block {
 
 	public void setPublishTopic(String topic) {
 		if (topic != null) {
-			publishTopic = "generic-map-ui-"+groupId+"/"+topic;			
+			publishTopic = baseTopic+"/"+topic;			
 		}
 		else {
-			publishTopic = "generic-map-ui-"+groupId;
+			publishTopic = baseTopic;
 		}
 	}
 	
 	public void addSubscribeTopic(String topic) {
-		subscribeTopics += ","+topic;
+		subscribeTopics += ","+baseTopic+"/"+topic;
 		setProperty(MQTT.P_MQTT_TOPIC_SUBSCRIBE, subscribeTopics);
 	}
 

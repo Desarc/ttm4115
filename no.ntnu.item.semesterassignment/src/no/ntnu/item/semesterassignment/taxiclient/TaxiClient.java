@@ -16,6 +16,10 @@ public class TaxiClient extends Block {
 	public TaxiRequest currentRequest;
 	public java.lang.String state;
 	
+	public TaxiClient() {
+		state = OFFLINE;
+	}
+	
 	public TaxiMessage generateOnDuty() {
 		if (state.equals(OFFLINE)) {
 			System.out.println("Logging in...");
