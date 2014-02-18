@@ -103,7 +103,7 @@
   <arctis:event xmi:id="_-60bsIK-EeOHFPexAm9Akg" base_Transition="_-6z0oIK-EeOHFPexAm9Akg" effects="_pVfSAIK-EeOHFPexAm9Akg _kEeEUIK-EeOHFPexAm9Akg"/>
   <graphics:Shape xmi:id="_hTmpwIK_EeOHFPexAm9Akg" aux1="0 39 -122 0 " base_Element="_gQTZsIK_EeOHFPexAm9Akg"/>
   <graphics:Shape xmi:id="_qXQl0IQjEeOlHJiOzRtRDg" x="234" y="216" width="127" height="55" base_Element="_qLjsIIQjEeOlHJiOzRtRDg"/>
-  <graphics:Shape xmi:id="_5KOD0IQjEeOlHJiOzRtRDg" aux1="122 0 7 -22 " base_Element="_l2DWsIK-EeOHFPexAm9Akg"/>
+  <graphics:Shape xmi:id="_5KOD0IQjEeOlHJiOzRtRDg" aux1="122 0 0 -22 " base_Element="_l2DWsIK-EeOHFPexAm9Akg"/>
   <arctis:event xmi:id="_tcxTUIQlEeOlHJiOzRtRDg" base_Transition="_tcwsQIQlEeOlHJiOzRtRDg" effects="_z9ytcIK-EeOHFPexAm9Akg"/>
   <arctis:esm xmi:id="_bi9cUIQpEeOlHJiOzRtRDg" base_StateMachine="_bhZWEoQpEeOlHJiOzRtRDg"/>
   <arctis:event xmi:id="_bi-DYoQpEeOlHJiOzRtRDg" base_Transition="_bi-DYYQpEeOlHJiOzRtRDg" triggers="_bhYH8IQpEeOlHJiOzRtRDg"/>
@@ -118,7 +118,7 @@
   <graphics:Shape xmi:id="_bjF_MIQpEeOlHJiOzRtRDg" x="342" y="216" width="198" height="144" base_Element="_bhQMIIQpEeOlHJiOzRtRDg"/>
   <graphics:Shape xmi:id="_V7Vy4IQxEeODF9elR9K5-g" aux1="0 58 -410 0 " base_Element="_deqUAIQpEeOlHJiOzRtRDg"/>
   <graphics:Shape xmi:id="_XZkEYIQxEeODF9elR9K5-g" aux1="" base_Element="_c7MakIQpEeOlHJiOzRtRDg"/>
-  <graphics:Shape xmi:id="_bCbBcIQxEeODF9elR9K5-g" aux1="7 21 -57 0 " base_Element="_eGHVkIQpEeOlHJiOzRtRDg"/>
+  <graphics:Shape xmi:id="_bCbBcIQxEeODF9elR9K5-g" aux1="0 21 -57 0 " base_Element="_eGHVkIQpEeOlHJiOzRtRDg"/>
   <graphics:Shape xmi:id="_cYVEcIQxEeODF9elR9K5-g" aux1="212 0 0 -58 " base_Element="_d3d1kIQpEeOlHJiOzRtRDg"/>
   <arctis:event xmi:id="_-3DsAIQ9EeODF9elR9K5-g" base_Transition="_-1flwIQ9EeODF9elR9K5-g" effects="_pVfSAIK-EeOHFPexAm9Akg"/>
 </xmi:XMI>

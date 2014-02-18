@@ -7,11 +7,10 @@
           <transition xmi:id="_auC2oJV5EeOAvbU2bIO-iA" name="init / " source="_AXvb4JS2EeOzs7hpNEuEjQ" target="_auDdsZV5EeOAvbU2bIO-iA"/>
           <transition xmi:id="_bnF-gJV5EeOAvbU2bIO-iA" name=" / request" source="_auDdsZV5EeOAvbU2bIO-iA" target="_auDdsZV5EeOAvbU2bIO-iA"/>
           <transition xmi:id="_e0w0YJV5EeOAvbU2bIO-iA" name="message / " source="_auDdsZV5EeOAvbU2bIO-iA" target="_auDdsZV5EeOAvbU2bIO-iA"/>
-          <transition xmi:id="_f1JTUJV5EeOAvbU2bIO-iA" name=" / request; message" source="_auDdsZV5EeOAvbU2bIO-iA" target="_f1J6YZV5EeOAvbU2bIO-iA"/>
+          <transition xmi:id="_f1JTUJV5EeOAvbU2bIO-iA" name=" / request; message" source="_auDdsZV5EeOAvbU2bIO-iA" target="_auDdsZV5EeOAvbU2bIO-iA"/>
           <transition xmi:id="_hE98cJV5EeOAvbU2bIO-iA" name=" / exit" source="_auDdsZV5EeOAvbU2bIO-iA" target="_hE_KkZV5EeOAvbU2bIO-iA"/>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_AXvb4JS2EeOzs7hpNEuEjQ" name="&lt;initial>"/>
           <subvertex xmi:type="uml:State" xmi:id="_auDdsZV5EeOAvbU2bIO-iA" name="active"/>
-          <subvertex xmi:type="uml:FinalState" xmi:id="_f1J6YZV5EeOAvbU2bIO-iA" name="&lt;final>"/>
           <subvertex xmi:type="uml:FinalState" xmi:id="_hE_KkZV5EeOAvbU2bIO-iA" name="&lt;final>"/>
         </region>
       </ownedBehavior>

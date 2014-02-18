@@ -11,7 +11,7 @@ public class TaxiMessage {
 	public static final String confirm = "CONFIRM";					//data1: userId, data2: toPosition, data3: fromPosition
 	public static final String decline = "DECLINE";					//data1: userId, data2: toPosition, data3: fromPosition
 	public static final String taxiRequest = "TAXI_REQUEST";		//data1: toPosition, data2: fromPosition
-	public static final String requestConfirm = "CONFIRM_REQUEST";	//data1: taxiId, data2: estimatedTime
+	public static final String requestConfirm = "REQUEST_CONFIRM";	//data1: taxiId, data2: estimatedTime
 	public static final String queueNo = "QUEUE_NO";				//data1: queueNo
 	public static final String tourOrder = "TOUR_ORDER";			//data1: userId, data2: toPosition, data3: fromPosition
 	
