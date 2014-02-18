@@ -13,6 +13,7 @@ public class TaxiDispatcher extends Block {
 	final String TAXI_READY = "TAXI_READY";
 	final String QUEUE_POSITION = "QUEUE_POSITION";
 	final String REQUEST_WAITING = "REQUEST_WAITING";
+	final String WAIT = "WAIT";
 	
 	private ArrayDeque<TaxiRequest> requestQueue;
 	private ArrayDeque<WaitingTaxi> taxiQueue;
@@ -22,6 +23,12 @@ public class TaxiDispatcher extends Block {
 	public container.TaxiRequest currentRequest;
 	public container.WaitingTaxi currentTaxi;
 
+	public TaxiDispatcher() {
+		requestQueue = new ArrayDeque<TaxiRequest>();
+		taxiQueue = new ArrayDeque<WaitingTaxi>();
+		allTaxis = new HashMap<String, WaitingTaxi>();
+	}
+	
 	public TaxiMessage createQueueNo() {
 		return new TaxiMessage(TaxiMessage.DISPATCHER, currentRequest.getId(), TaxiMessage.queueNo, ""+getRequestQueuePosition(currentRequest.getId()));
 	}
@@ -62,7 +69,8 @@ public class TaxiDispatcher extends Block {
 	public TaxiMessage createTourOrder() {
 		currentTaxi = taxiQueue.removeFirst();
 		currentTaxi.setStatus(WaitingTaxi.WAITING_CONFIRM);
-		return new TaxiMessage(TaxiMessage.DISPATCHER, currentTaxi.getId(), TaxiMessage.tourOrder, currentRequest.getToPosition(), currentRequest.getFromPosition());
+		System.out.println("Forwarding taxi request from "+currentRequest.getId()+" to "+currentTaxi.getId());
+		return new TaxiMessage(TaxiMessage.DISPATCHER, currentTaxi.getId(), TaxiMessage.tourOrder, currentRequest.getId(), currentRequest.getToPosition(), currentRequest.getFromPosition());
 	}
 
 	public void setOnDuty() {
@@ -84,7 +92,7 @@ public class TaxiDispatcher extends Block {
 		}
 		else {
 			taxiQueue.addLast(currentTaxi);
-			return null;
+			return WAIT;
 		}
 	}
 

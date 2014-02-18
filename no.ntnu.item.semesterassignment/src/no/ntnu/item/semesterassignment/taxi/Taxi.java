@@ -1,13 +1,19 @@
 package no.ntnu.item.semesterassignment.taxi;
 
+import container.TaxiMessage;
 import no.ntnu.item.arctis.runtime.Block;
 
 public class Taxi extends Block {
 
 	public java.lang.String alias_taxi;
+	public container.TaxiMessage currentMessage;
 	
 	public static String getAlias(String alias) {
 		return alias;
+	}
+
+	public String getMessageType(TaxiMessage message) {
+		return message.getType();
 	}
 
 }
