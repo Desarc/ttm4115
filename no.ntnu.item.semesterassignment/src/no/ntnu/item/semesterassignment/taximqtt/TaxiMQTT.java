@@ -49,28 +49,8 @@ public class TaxiMQTT extends Block {
 		setProperty(MQTT.P_MQTT_TOPIC_SUBSCRIBE, subscribeTopics);
 	}
 
-	public void publishOK() {
-		System.out.println("Publish OK.");
-	}
-
-	public void publishNOK(String error) {
-		System.out.println("Publish error: "+error);
-	}
-
-	public void connected() {
-		System.out.println("Connected.");
-	}
-
-	public void connectionLost(String error) {
-		System.out.println("Connection lost: "+error);
-	}
-
-	public void startFailed(String error) {
-		System.out.println("Start failed: "+error);
-	}
-
 	public void deserializeError(String error) {
-		System.out.println("Deserialize error: "+error);
+		System.out.println("Deserialize error in TaxiMQTT: "+error);
 	}
 
 	public TaxiMessage toTaxiMessage(Object message) {
