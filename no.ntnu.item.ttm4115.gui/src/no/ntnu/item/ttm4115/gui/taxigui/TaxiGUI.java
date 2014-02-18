@@ -31,7 +31,7 @@ public class TaxiGUI extends Block {
 	private JTextArea textArea;
 
 	public void show(String id) {
-		frame = new JFrame("Taxi "+id);
+		frame = new JFrame("ID: "+id);
 		frame.setBounds(200, 200, 450, 300);
 		
 		frame.addWindowListener(new WindowListener() {

@@ -25,6 +25,9 @@
           <argument xmi:id="_uV-7wJiIEeOU-MmdO5Mh7A" name="disconnect" inPartition="_-2yRYJSzEeOzs7hpNEuEjQ"/>
           <argument xmi:id="_-0HHMJjtEeOzNYifXAaq3w" name="addSubscribeTopic" inPartition="_-2yRYJSzEeOzs7hpNEuEjQ" type="_uTdMM5iIEeOU-MmdO5Mh7A"/>
           <argument xmi:id="_-0JjcJjtEeOzNYifXAaq3w" name="setPublishTopic" inPartition="_-2yRYJSzEeOzs7hpNEuEjQ" type="_uTdMM5iIEeOU-MmdO5Mh7A"/>
+          <argument xmi:type="uml:ValuePin" xmi:id="_zycUEJjuEeOzNYifXAaq3w" name="groupId" type="_uTdMM5iIEeOU-MmdO5Mh7A">
+            <value xmi:type="uml:LiteralString" xmi:id="_zydiMJjuEeOzNYifXAaq3w" name="groupId" type="_uTdMM5iIEeOU-MmdO5Mh7A" value="studass"/>
+          </argument>
           <result xmi:id="_uV8fgJiIEeOU-MmdO5Mh7A" name="message" inPartition="_-2yRYJSzEeOzs7hpNEuEjQ" outgoing="_Ce2g8JipEeOU-MmdO5Mh7A" type="_uTeaUJiIEeOU-MmdO5Mh7A"/>
           <result xmi:id="_uV9toJiIEeOU-MmdO5Mh7A" name="disconnected" inPartition="_-2yRYJSzEeOzs7hpNEuEjQ"/>
           <result xmi:id="_-0LYoJjtEeOzNYifXAaq3w" name="publishedOk" inPartition="_-2yRYJSzEeOzs7hpNEuEjQ"/>

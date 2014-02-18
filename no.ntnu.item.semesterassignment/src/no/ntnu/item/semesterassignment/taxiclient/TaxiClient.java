@@ -10,27 +10,33 @@ public class TaxiClient extends Block {
 	public TaxiRequest currentRequest;
 	
 	public TaxiMessage generateOnDuty() {
+		System.out.println("Logging in...");
 		return new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.onDuty);
 	}
 	
 	public TaxiMessage generateOffDuty() {
+		System.out.println("Logging out...");
 		return new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.offDuty);
 	}
 	
 	public TaxiMessage generateAvailable() {
+		System.out.println("Setting status to available.");
 		return new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.available);
 	}
 	
 	public TaxiMessage generateUnavailable() {
+		System.out.println("Setting status to unavailable.");
 		return new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.unavailable);
 	}
 	
 	public TaxiMessage generateConfirm() {
+		System.out.println("Request confirmed.");
 		return new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.confirm);
 	}
 	
 	public TaxiMessage generateDecline() {
 		currentRequest = null;
+		System.out.println("Request declined, setting status to unavailable.");
 		return new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.decline);
 	}
 
