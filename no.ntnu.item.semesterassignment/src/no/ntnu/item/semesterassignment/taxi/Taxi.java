@@ -16,23 +16,23 @@ public class Taxi extends Block {
 	}
 
 	public TaxiMessage generateOnDuty() {
-		return new TaxiMessage(this.alias_taxi, TaxiMessage.DISPATCHER, TaxiMessage.onDuty);
+		return new TaxiMessage(TaxiMessage.DISPATCHER, this.alias_taxi, TaxiMessage.onDuty);
 	}
 	
 	public TaxiMessage generateOffDuty() {
-		return new TaxiMessage(this.alias_taxi, TaxiMessage.DISPATCHER, TaxiMessage.offDuty);
+		return new TaxiMessage(TaxiMessage.DISPATCHER, this.alias_taxi, TaxiMessage.offDuty);
 	}
 	
 	public TaxiMessage generateAvailable() {
-		return new TaxiMessage(this.alias_taxi, TaxiMessage.DISPATCHER, TaxiMessage.available);
+		return new TaxiMessage(TaxiMessage.DISPATCHER, this.alias_taxi, TaxiMessage.available);
 	}
 	
 	public TaxiMessage generateUnavailable() {
-		return new TaxiMessage(this.alias_taxi, TaxiMessage.DISPATCHER, TaxiMessage.unavailable);
+		return new TaxiMessage(TaxiMessage.DISPATCHER, this.alias_taxi, TaxiMessage.unavailable);
 	}
 	
 	public TaxiMessage generateConfirm() {
-		return new TaxiMessage(this.alias_taxi, TaxiMessage.DISPATCHER, TaxiMessage.confirm);
+		return new TaxiMessage(TaxiMessage.DISPATCHER, this.alias_taxi, TaxiMessage.confirm);
 	}
 
 }

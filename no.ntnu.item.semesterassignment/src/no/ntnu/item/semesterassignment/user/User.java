@@ -13,7 +13,7 @@ public class User extends Block {
 
 	public TaxiMessage generateRequest(String address) {
 		System.out.println("Generating new request for taxi to "+address);
-		return new TaxiMessage(this.user_alias, TaxiMessage.DISPATCHER, TaxiMessage.taxiRequest, address);
+		return new TaxiMessage(TaxiMessage.DISPATCHER, this.user_alias, TaxiMessage.taxiRequest, address);
 	}
 
 	public String readMessage(TaxiMessage message) {
