@@ -44,6 +44,7 @@ public class TaxiDispatcher extends Block {
 	}
 
 	public String getMessageType(TaxiMessage message) {
+		System.out.println(message.getType()+" received from "+message.getFrom());
 		return message.getType();
 	}
 
