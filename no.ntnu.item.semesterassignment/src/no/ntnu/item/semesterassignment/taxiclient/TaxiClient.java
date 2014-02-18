@@ -5,42 +5,71 @@ import container.TaxiRequest;
 import no.ntnu.item.arctis.runtime.Block;
 
 public class TaxiClient extends Block {
+	
+	final String OFFLINE = "Offline";
+	final String ONLINE_AVAIL = "Online, available";
+	final String ONLINE_UNAVAIL = "Online, not available";
+	final String ORDER_WAITING = "Online, TourOrder waiting";
+	final String DRIVING = "Online, driving";
 
 	public String taxiId;
 	public TaxiRequest currentRequest;
+	public java.lang.String state;
 	
 	public TaxiMessage generateOnDuty() {
-		System.out.println("Logging in...");
+		if (state.equals(OFFLINE)) {
+			System.out.println("Logging in...");
+			state = ONLINE_UNAVAIL;
+		}
 		return new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.onDuty);
 	}
 	
 	public TaxiMessage generateOffDuty() {
-		System.out.println("Logging out...");
+		if (!state.equals(OFFLINE)) {
+			System.out.println("Logging out...");
+			state = OFFLINE;
+		}
 		return new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.offDuty);
 	}
 	
 	public TaxiMessage generateAvailable() {
-		System.out.println("Setting status to available.");
+		if (state.equals(ONLINE_UNAVAIL)) {
+			System.out.println("Setting status to available.");
+			state = ONLINE_AVAIL;
+		}
 		return new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.available);
 	}
 	
 	public TaxiMessage generateUnavailable() {
-		System.out.println("Setting status to unavailable.");
+		if (state.equals(ONLINE_AVAIL)) {
+			System.out.println("Setting status to unavailable.");
+			state = ONLINE_UNAVAIL;
+		}
 		return new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.unavailable);
 	}
 	
 	public TaxiMessage generateConfirm() {
-		System.out.println("Request confirmed.");
+		if (state.equals(ORDER_WAITING)) {
+			System.out.println("Request confirmed.");
+			state = DRIVING;
+		}
 		return new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.confirm);
 	}
 	
 	public TaxiMessage generateDecline() {
+		if (state.equals(ORDER_WAITING)) {
+			System.out.println("Request declined, setting status to unavailable.");
+			state = ONLINE_UNAVAIL;
+		}
+		TaxiMessage message = new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.decline, currentRequest.getId(), currentRequest.getToPosition(), currentRequest.getFromPosition()); 
 		currentRequest = null;
-		System.out.println("Request declined, setting status to unavailable.");
-		return new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.decline);
+		return message;
 	}
 
 	public String handleRequest(TaxiMessage message) {
+		if (state.equals(ONLINE_AVAIL)) {
+			state = ORDER_WAITING;
+		}
 		currentRequest = new TaxiRequest(message.getData1(), message.getData2(), message.getData3());
 		return "Taxi requested from "+currentRequest.getFromPosition()+" to "+currentRequest.getToPosition()+". Accept?";
 	}

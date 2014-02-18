@@ -29,9 +29,13 @@ public class TaxiGUI extends Block {
 	private JFrame frame;
 	private JButton onDuty, offDuty, available, unavailable, confirm;
 	private JTextArea textArea;
+	
+	private String state = "Offline";
+	private String id;
 
 	public void show(String id) {
-		frame = new JFrame("ID: "+id);
+		this.id = id;
+		frame = new JFrame(id+": "+state);
 		frame.setBounds(200, 200, 450, 300);
 		
 		frame.addWindowListener(new WindowListener() {
@@ -151,5 +155,10 @@ public class TaxiGUI extends Block {
     	cal.getTime();
     	SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
 		textArea.setText(textArea.getText()+"\n"+sdf.format(cal.getTime())+": "+message);
+	}
+
+	public void setState(String state) {
+		this.state = state;
+		frame.setTitle(id+": "+state);
 	}
 }
