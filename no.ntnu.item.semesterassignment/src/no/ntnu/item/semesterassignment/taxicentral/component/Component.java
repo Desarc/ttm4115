@@ -10,7 +10,7 @@ public class Component extends Block {
 	}
 
 	public String dispatcherId() {
-		return "DISPATCHER";
+		return TaxiMessage.DISPATCHER;
 	}
 
 	public void publishOk() {

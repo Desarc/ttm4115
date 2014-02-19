@@ -26,7 +26,12 @@ public class TaxiMQTT extends Block {
 	}
 	
 	public Message toMessage(String text, String topic) {
-		return new Message(text.getBytes(Charset.forName("UTF-8")),topic);
+		if (topic == null || topic.isEmpty()) {
+			return new Message(text.getBytes(Charset.forName("UTF-8")), baseTopic);
+		}
+		else {
+			return new Message(text.getBytes(Charset.forName("UTF-8")), baseTopic+"/"+topic);
+		}
 	}
 	
 	public String toString(Message message) {
