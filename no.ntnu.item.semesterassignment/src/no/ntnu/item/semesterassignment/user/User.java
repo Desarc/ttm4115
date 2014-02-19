@@ -15,5 +15,9 @@ public class User extends Block {
 	public String getMessageType(TaxiMessage message) {
 		return message.getType();	
 	}
+
+	public String getTopic(TaxiMessage message) {
+		return message.getTo();
+	}
 	
 }

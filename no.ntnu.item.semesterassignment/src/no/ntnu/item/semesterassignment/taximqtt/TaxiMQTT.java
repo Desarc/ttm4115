@@ -12,7 +12,6 @@ import no.ntnu.item.arctis.runtime.Block;
 public class TaxiMQTT extends Block {
 	
 	private String baseTopic;
-	private String publishTopic;
 	// Instance parameter. Edit only in overview page.
 	public final java.lang.String groupId;
 	
@@ -26,21 +25,12 @@ public class TaxiMQTT extends Block {
 		return param;
 	}
 	
-	public Message toMessage(String text) {
-		return new Message(text.getBytes(Charset.forName("UTF-8")), publishTopic);
+	public Message toMessage(String text, String topic) {
+		return new Message(text.getBytes(Charset.forName("UTF-8")),topic);
 	}
 	
 	public String toString(Message message) {
 		return new String(message.getPayload());
-	}
-
-	public void setPublishTopic(String topic) {
-		if (topic != null) {
-			publishTopic = baseTopic+"/"+topic;			
-		}
-		else {
-			publishTopic = baseTopic;
-		}
 	}
 
 	public void deserializeError(String error) {

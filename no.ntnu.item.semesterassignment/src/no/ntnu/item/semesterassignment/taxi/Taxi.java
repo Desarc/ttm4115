@@ -16,4 +16,8 @@ public class Taxi extends Block {
 		return message.getType();
 	}
 
+	public String getTopic(TaxiMessage message) {
+		return message.getTo();
+	}
+
 }
