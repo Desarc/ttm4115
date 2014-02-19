@@ -20,4 +20,12 @@ public class Taxi extends Block {
 		return message.getTo();
 	}
 
+	public void publishedOk() {
+		System.out.println("Publish OK.");
+	}
+
+	public void publishError(String error) {
+		System.out.println("Publish error: "+error);
+	}
+
 }

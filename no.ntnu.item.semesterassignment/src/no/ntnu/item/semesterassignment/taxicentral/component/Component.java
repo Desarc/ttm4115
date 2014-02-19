@@ -13,6 +13,14 @@ public class Component extends Block {
 		return "DISPATCHER";
 	}
 
+	public void publishOk() {
+		System.out.println("Publish Ok.");
+	}
+
+	public void publishError(String error) {
+		System.out.println("Publish error: "+error);
+	}
+
 
 
 }

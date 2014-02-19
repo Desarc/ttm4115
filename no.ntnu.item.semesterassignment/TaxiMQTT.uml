@@ -58,10 +58,10 @@
       </ownedParameter>
       <ownedParameter xmi:id="_uIIoMJjkEeO5horfgX95HA" name="setPublishTopic" type="_sgrOspiCEeOU-MmdO5Mh7A" isStream="true"/>
       <ownedParameter xmi:id="_TXH_oJjrEeOzNYifXAaq3w" name="publishedOk" direction="out" isStream="true"/>
-      <ownedParameter xmi:id="_WbXMsJjrEeOzNYifXAaq3w" name="publishError" direction="out" isStream="true"/>
+      <ownedParameter xmi:id="_WbXMsJjrEeOzNYifXAaq3w" name="publishError" type="_sgrOspiCEeOU-MmdO5Mh7A" direction="out" isStream="true"/>
       <ownedParameter xmi:id="_YWIQQJjrEeOzNYifXAaq3w" name="connected" direction="out" isStream="true"/>
-      <ownedParameter xmi:id="_bN9ZAJjrEeOzNYifXAaq3w" name="connectionLost" direction="out" parameterSet="_fkq6kJjrEeOzNYifXAaq3w"/>
-      <ownedParameter xmi:id="_di0-oJjrEeOzNYifXAaq3w" name="startFailed" direction="out" parameterSet="_di4B8JjrEeOzNYifXAaq3w"/>
+      <ownedParameter xmi:id="_bN9ZAJjrEeOzNYifXAaq3w" name="connectionLost" type="_sgrOspiCEeOU-MmdO5Mh7A" direction="out" parameterSet="_fkq6kJjrEeOzNYifXAaq3w"/>
+      <ownedParameter xmi:id="_di0-oJjrEeOzNYifXAaq3w" name="startFailed" type="_sgrOspiCEeOU-MmdO5Mh7A" direction="out" parameterSet="_di4B8JjrEeOzNYifXAaq3w"/>
       <ownedParameterSet xmi:id="_di4B8JjrEeOzNYifXAaq3w" name="startFailed" parameter="_di0-oJjrEeOzNYifXAaq3w"/>
       <ownedParameterSet xmi:id="_e9dJkJjrEeOzNYifXAaq3w" name="disconnected" parameter="_s0B9oJiEEeOU-MmdO5Mh7A"/>
       <ownedParameterSet xmi:id="_fkq6kJjrEeOzNYifXAaq3w" name="connectionLost" parameter="_bN9ZAJjrEeOzNYifXAaq3w"/>
@@ -142,10 +142,10 @@
       <node xmi:type="uml:ActivityParameterNode" xmi:id="_HVCFMJiHEeOU-MmdO5Mh7A" name="disconnect" inPartition="_rnT9wJiCEeOU-MmdO5Mh7A" outgoing="_JbjFwJiHEeOU-MmdO5Mh7A" parameter="_HVGWoJiHEeOU-MmdO5Mh7A"/>
       <node xmi:type="uml:ActivityParameterNode" xmi:id="_uIDIoJjkEeO5horfgX95HA" name="setPublishTopic" inPartition="_rnT9wJiCEeOU-MmdO5Mh7A" outgoing="_fJx2QJlXEeOVxcjdMsTtxA" type="_sgrOspiCEeOU-MmdO5Mh7A" parameter="_uIIoMJjkEeO5horfgX95HA"/>
       <node xmi:type="uml:ActivityParameterNode" xmi:id="_TW-OoJjrEeOzNYifXAaq3w" name="publishedOk" inPartition="_rnT9wJiCEeOU-MmdO5Mh7A" incoming="_iR-1YJjrEeOzNYifXAaq3w" parameter="_TXH_oJjrEeOzNYifXAaq3w"/>
-      <node xmi:type="uml:ActivityParameterNode" xmi:id="_WbRtIJjrEeOzNYifXAaq3w" name="publishError" inPartition="_rnT9wJiCEeOU-MmdO5Mh7A" incoming="_hzAaYJjrEeOzNYifXAaq3w" parameter="_WbXMsJjrEeOzNYifXAaq3w"/>
+      <node xmi:type="uml:ActivityParameterNode" xmi:id="_WbRtIJjrEeOzNYifXAaq3w" name="publishError" inPartition="_rnT9wJiCEeOU-MmdO5Mh7A" incoming="_hzAaYJjrEeOzNYifXAaq3w" type="_sgrOspiCEeOU-MmdO5Mh7A" parameter="_WbXMsJjrEeOzNYifXAaq3w"/>
       <node xmi:type="uml:ActivityParameterNode" xmi:id="_YWCwsJjrEeOzNYifXAaq3w" name="connected" inPartition="_rnT9wJiCEeOU-MmdO5Mh7A" incoming="_hnOoMJjrEeOzNYifXAaq3w" parameter="_YWIQQJjrEeOzNYifXAaq3w"/>
-      <node xmi:type="uml:ActivityParameterNode" xmi:id="_bN4ggJjrEeOzNYifXAaq3w" name="connectionLost" inPartition="_rnT9wJiCEeOU-MmdO5Mh7A" incoming="_hbddEJjrEeOzNYifXAaq3w" parameter="_bN9ZAJjrEeOzNYifXAaq3w"/>
-      <node xmi:type="uml:ActivityParameterNode" xmi:id="_diwGIJjrEeOzNYifXAaq3w" name="startFailed" inPartition="_rnT9wJiCEeOU-MmdO5Mh7A" incoming="_hQVLIJjrEeOzNYifXAaq3w" parameter="_di0-oJjrEeOzNYifXAaq3w"/>
+      <node xmi:type="uml:ActivityParameterNode" xmi:id="_bN4ggJjrEeOzNYifXAaq3w" name="connectionLost" inPartition="_rnT9wJiCEeOU-MmdO5Mh7A" incoming="_hbddEJjrEeOzNYifXAaq3w" type="_sgrOspiCEeOU-MmdO5Mh7A" parameter="_bN9ZAJjrEeOzNYifXAaq3w"/>
+      <node xmi:type="uml:ActivityParameterNode" xmi:id="_diwGIJjrEeOzNYifXAaq3w" name="startFailed" inPartition="_rnT9wJiCEeOU-MmdO5Mh7A" incoming="_hQVLIJjrEeOzNYifXAaq3w" type="_sgrOspiCEeOU-MmdO5Mh7A" parameter="_di0-oJjrEeOzNYifXAaq3w"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_sgpZgJiCEeOU-MmdO5Mh7A" name="com.bitreactive.library.mqtt">
       <packagedElement xmi:type="uml:Activity" xmi:id="_AB69sObWEeG9SpMqxrlJPg" name="MQTT" classifierBehavior="_sgx8YJiCEeOU-MmdO5Mh7A" group="_sgqAkJiCEeOU-MmdO5Mh7A" partition="_sgqAkJiCEeOU-MmdO5Mh7A" node="_sgqAkZiCEeOU-MmdO5Mh7A _sgqnoZiCEeOU-MmdO5Mh7A _sgr1wJiCEeOU-MmdO5Mh7A _sgsc0JiCEeOU-MmdO5Mh7A _sgsc05iCEeOU-MmdO5Mh7A _sgtD4ZiCEeOU-MmdO5Mh7A _sgtq8JiCEeOU-MmdO5Mh7A _sguSAJiCEeOU-MmdO5Mh7A _sgu5EJiCEeOU-MmdO5Mh7A _sgvgIJiCEeOU-MmdO5Mh7A _sgwHMJiCEeOU-MmdO5Mh7A">

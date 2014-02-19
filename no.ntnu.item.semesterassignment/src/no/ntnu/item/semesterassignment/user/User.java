@@ -19,5 +19,13 @@ public class User extends Block {
 	public String getTopic(TaxiMessage message) {
 		return message.getTo();
 	}
+
+	public void publishError(String error) {
+		System.out.println("Publish error: "+error);
+	}
+
+	public void publishedOk() {
+		System.out.println("Publish Ok.");
+	}
 	
 }
