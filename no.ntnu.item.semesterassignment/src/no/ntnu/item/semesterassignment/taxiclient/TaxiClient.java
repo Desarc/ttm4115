@@ -53,7 +53,7 @@ public class TaxiClient extends Block {
 	}
 	
 	public TaxiMessage generateConfirm() {
-		if (state.equals(ORDER_WAITING)) {
+		if (state.equals(ORDER_WAITING) && currentRequest != null) {
 			System.out.println("Request confirmed.");
 			state = DRIVING;
 		}
