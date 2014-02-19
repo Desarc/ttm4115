@@ -106,6 +106,7 @@ public class TaxiDispatcher extends Block {
 	public TaxiMessage taxiConfirm() {
 		currentTaxi = allTaxis.get(currentMessage.getFrom());
 		currentTaxi.setStatus(WaitingTaxi.UNAVAILABLE);
+		System.out.println(currentTaxi.getId()+" confirmed request, forwarding confirmation to "+currentMessage.getData1());
 		return new TaxiMessage(currentMessage.getData1(), TaxiMessage.DISPATCHER, TaxiMessage.requestConfirm, currentMessage.getFrom());
 	}
 

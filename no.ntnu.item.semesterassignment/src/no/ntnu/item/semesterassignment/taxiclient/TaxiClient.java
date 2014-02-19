@@ -57,7 +57,7 @@ public class TaxiClient extends Block {
 			System.out.println("Request confirmed.");
 			state = DRIVING;
 		}
-		return new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.confirm);
+		return new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.confirm, currentRequest.getId(), currentRequest.getToPosition(), currentRequest.getFromPosition());
 	}
 	
 	public TaxiMessage generateDecline() {
