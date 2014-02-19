@@ -37,7 +37,7 @@ public class TaxiClient extends Block {
 	}
 	
 	public TaxiMessage generateAvailable() {
-		if (state.equals(ONLINE_UNAVAIL)) {
+		if (state.equals(ONLINE_UNAVAIL) || state.equals(DRIVING)) {
 			System.out.println("Setting status to available.");
 			state = ONLINE_AVAIL;
 		}

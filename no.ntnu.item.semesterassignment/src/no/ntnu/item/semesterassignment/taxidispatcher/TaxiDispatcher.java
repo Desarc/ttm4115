@@ -39,6 +39,7 @@ public class TaxiDispatcher extends Block {
 			if (tr.getId().equals(id)) {
 				return i;
 			}
+			i++;
 		}
 		return -1;
 	}
@@ -123,7 +124,8 @@ public class TaxiDispatcher extends Block {
 
 	public TaxiMessage assignTaxi() {
 		currentRequest = requestQueue.removeFirst();
-		return new TaxiMessage(currentRequest.getId(), TaxiMessage.DISPATCHER, TaxiMessage.requestConfirm, currentTaxi.getId());
+		System.out.println("Forwarding taxi request from "+currentRequest.getId()+" to "+currentTaxi.getId());
+		return new TaxiMessage(currentTaxi.getId(), TaxiMessage.DISPATCHER, TaxiMessage.tourOrder, currentRequest.getId(), currentRequest.getToPosition(), currentRequest.getFromPosition());
 	}
 
 }

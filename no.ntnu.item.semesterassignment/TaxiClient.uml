@@ -9,13 +9,17 @@
           <transition xmi:id="_RrkEQJjAEeORY6g3T41jdw" name=" / offDuty" source="_gJ-OkZjAEeORY6g3T41jdw" target="_MFRKIJjAEeORY6g3T41jdw"/>
           <transition xmi:id="_VNUTwJjAEeORY6g3T41jdw" name=" / available" source="_gJ-OkZjAEeORY6g3T41jdw" target="_VNU60ZjAEeORY6g3T41jdw"/>
           <transition xmi:id="_WzsbsJjAEeORY6g3T41jdw" name="taxiRequest / " source="_VNU60ZjAEeORY6g3T41jdw" target="_ZxMuoJjAEeORY6g3T41jdw"/>
-          <transition xmi:id="_gJ9ngJjAEeORY6g3T41jdw" name=" / confirm" source="_ZxMuoJjAEeORY6g3T41jdw" target="_gJ-OkZjAEeORY6g3T41jdw"/>
+          <transition xmi:id="_gJ9ngJjAEeORY6g3T41jdw" name=" / confirm" source="_ZxMuoJjAEeORY6g3T41jdw" target="_WUQR8JlVEeOVxcjdMsTtxA"/>
           <transition xmi:id="_lg_WkJjAEeORY6g3T41jdw" name=" / decline" source="_ZxMuoJjAEeORY6g3T41jdw" target="_gJ-OkZjAEeORY6g3T41jdw"/>
           <transition xmi:id="_qK3rwJjAEeORY6g3T41jdw" name=" / unavailable" source="_VNU60ZjAEeORY6g3T41jdw" target="_gJ-OkZjAEeORY6g3T41jdw"/>
           <transition xmi:id="_tjw6MJjAEeORY6g3T41jdw" name=" / exit" source="_MFRKIJjAEeORY6g3T41jdw" target="_tjxhQZjAEeORY6g3T41jdw"/>
           <transition xmi:id="_zDMXUJjAEeORY6g3T41jdw" name=" / exit" source="_VNU60ZjAEeORY6g3T41jdw" target="_zDM-YJjAEeORY6g3T41jdw"/>
           <transition xmi:id="_1iGCsJjAEeORY6g3T41jdw" name=" / exit" source="_gJ-OkZjAEeORY6g3T41jdw" target="_1iGpwJjAEeORY6g3T41jdw"/>
           <transition xmi:id="_-CFGwJjAEeORY6g3T41jdw" name=" / offDuty" source="_VNU60ZjAEeORY6g3T41jdw" target="_MFRKIJjAEeORY6g3T41jdw"/>
+          <transition xmi:id="_Z0v9MJlVEeOVxcjdMsTtxA" name=" / available" source="_WUQR8JlVEeOVxcjdMsTtxA" target="_VNU60ZjAEeORY6g3T41jdw"/>
+          <transition xmi:id="_boB4sJlVEeOVxcjdMsTtxA" name=" / exit" source="_WUQR8JlVEeOVxcjdMsTtxA" target="_boEU8JlVEeOVxcjdMsTtxA"/>
+          <transition xmi:id="_dygMMJlVEeOVxcjdMsTtxA" name=" / offDuty" source="_WUQR8JlVEeOVxcjdMsTtxA" target="_MFRKIJjAEeORY6g3T41jdw"/>
+          <transition xmi:id="_jhAnIJlVEeOVxcjdMsTtxA" name=" / unavailable" source="_WUQR8JlVEeOVxcjdMsTtxA" target="_gJ-OkZjAEeORY6g3T41jdw"/>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_EGbmEZS0EeOzs7hpNEuEjQ" name="&lt;initial>"/>
           <subvertex xmi:type="uml:State" xmi:id="_MFRKIJjAEeORY6g3T41jdw" name="offDuty"/>
           <subvertex xmi:type="uml:State" xmi:id="_VNU60ZjAEeORY6g3T41jdw" name="available"/>
@@ -24,6 +28,8 @@
           <subvertex xmi:type="uml:FinalState" xmi:id="_tjxhQZjAEeORY6g3T41jdw" name="&lt;final>"/>
           <subvertex xmi:type="uml:FinalState" xmi:id="_zDM-YJjAEeORY6g3T41jdw" name="&lt;final>"/>
           <subvertex xmi:type="uml:FinalState" xmi:id="_1iGpwJjAEeORY6g3T41jdw" name="&lt;final>"/>
+          <subvertex xmi:type="uml:State" xmi:id="_WUQR8JlVEeOVxcjdMsTtxA" name="driving"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_boEU8JlVEeOVxcjdMsTtxA" name="&lt;final>"/>
         </region>
       </ownedBehavior>
       <ownedOperation xmi:id="_Dz7i4Ji8EeORY6g3T41jdw" name="generateOnDuty"/>
@@ -286,4 +292,8 @@
   <graphics:Shape xmi:id="_wbF_8Jj9EeOzNYifXAaq3w" x="531" y="441" width="91" height="37" aux1="connector" base_Element="_wbEKwJj9EeOzNYifXAaq3w"/>
   <graphics:Shape xmi:id="_D_wSYJj-EeOzNYifXAaq3w" aux1="0 54 -63 0 " base_Element="_WuKBUJj1EeOzNYifXAaq3w"/>
   <graphics:Shape xmi:id="_Ft7EYJj-EeOzNYifXAaq3w" x="702" y="414" base_Element="_FiOKsJj-EeOzNYifXAaq3w"/>
+  <arctis:event xmi:id="_Z6GXQJlVEeOVxcjdMsTtxA" base_Transition="_Z0v9MJlVEeOVxcjdMsTtxA" effects="_dWZQgJi8EeORY6g3T41jdw"/>
+  <arctis:event xmi:id="_boCfwJlVEeOVxcjdMsTtxA" base_Transition="_boB4sJlVEeOVxcjdMsTtxA" effects="_BGoSUJjAEeORY6g3T41jdw"/>
+  <arctis:event xmi:id="_dygzQJlVEeOVxcjdMsTtxA" base_Transition="_dygMMJlVEeOVxcjdMsTtxA" effects="_L9_aQJi8EeORY6g3T41jdw"/>
+  <arctis:event xmi:id="_jhBOMJlVEeOVxcjdMsTtxA" base_Transition="_jhAnIJlVEeOVxcjdMsTtxA" effects="_S95ysJi8EeORY6g3T41jdw"/>
 </xmi:XMI>
