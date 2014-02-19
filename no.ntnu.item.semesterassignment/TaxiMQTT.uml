@@ -21,6 +21,7 @@
           <transition xmi:id="_39XHQJjsEeOzNYifXAaq3w" name="setPublishTopic / " source="_FeOgsJjsEeOzNYifXAaq3w" target="_FeOgsJjsEeOzNYifXAaq3w"/>
           <transition xmi:id="_rCMQUJj3EeOzNYifXAaq3w" name=" / message; setPublishTopic" source="_FeOgsJjsEeOzNYifXAaq3w" target="_FeOgsJjsEeOzNYifXAaq3w"/>
           <transition xmi:id="_Nv-m8JlZEeOVxcjdMsTtxA" name=" / message; setPublishTopic+publish" source="_FeOgsJjsEeOzNYifXAaq3w" target="_FeOgsJjsEeOzNYifXAaq3w"/>
+          <transition xmi:id="_hgPFYJlZEeOVxcjdMsTtxA" name="publish+setPublishTopic / " source="_FeOgsJjsEeOzNYifXAaq3w" target="_FeOgsJjsEeOzNYifXAaq3w"/>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_rsfYspiCEeOU-MmdO5Mh7A" name="&lt;initial>"/>
           <subvertex xmi:type="uml:State" xmi:id="_AcQboJjsEeOzNYifXAaq3w" name="connecting"/>
           <subvertex xmi:type="uml:State" xmi:id="_FeOgsJjsEeOzNYifXAaq3w" name="connected"/>
@@ -376,4 +377,5 @@
   <graphics:Shape xmi:id="_dMRnwJlXEeOVxcjdMsTtxA" aux1="94 0 0 -22 " base_Element="_DNXXIJiFEeOU-MmdO5Mh7A"/>
   <graphics:Shape xmi:id="_gDr5wJlXEeOVxcjdMsTtxA" aux1="392 0 0 -76 " base_Element="_fJx2QJlXEeOVxcjdMsTtxA"/>
   <arctis:event xmi:id="_Nv_OAJlZEeOVxcjdMsTtxA" base_Transition="_Nv-m8JlZEeOVxcjdMsTtxA" effects="_jGsVoJiEEeOU-MmdO5Mh7A _uIDIoJjkEeO5horfgX95HA _mAK5oJiDEeOU-MmdO5Mh7A"/>
+  <arctis:event xmi:id="_hgPscJlZEeOVxcjdMsTtxA" base_Transition="_hgPFYJlZEeOVxcjdMsTtxA" triggers="_mAK5oJiDEeOU-MmdO5Mh7A _uIDIoJjkEeO5horfgX95HA"/>
 </xmi:XMI>
