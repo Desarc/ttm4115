@@ -30,7 +30,7 @@ public class TaxiDispatcher extends Block {
 	}
 	
 	public TaxiMessage createQueueNo() {
-		return new TaxiMessage(TaxiMessage.DISPATCHER, currentRequest.getId(), TaxiMessage.queueNo, ""+getRequestQueuePosition(currentRequest.getId()));
+		return new TaxiMessage(currentRequest.getId(), TaxiMessage.DISPATCHER, TaxiMessage.queueNo, ""+getRequestQueuePosition(currentRequest.getId()));
 	}
 	
 	private int getRequestQueuePosition(String id) {
@@ -47,7 +47,7 @@ public class TaxiDispatcher extends Block {
 		currentRequest = new TaxiRequest(currentMessage.getData1(), currentMessage.getData2(), currentMessage.getData3());
 		currentTaxi = allTaxis.get(currentMessage.getFrom());
 		currentTaxi.setStatus(WaitingTaxi.UNAVAILABLE);
-		return new TaxiMessage(TaxiMessage.DISPATCHER, currentRequest.getId(), TaxiMessage.requestConfirm, currentTaxi.getId());
+		return new TaxiMessage(currentRequest.getId(), TaxiMessage.DISPATCHER, TaxiMessage.requestConfirm, currentTaxi.getId());
 	}
 
 	public String getMessageType(TaxiMessage message) {
@@ -70,7 +70,7 @@ public class TaxiDispatcher extends Block {
 		currentTaxi = taxiQueue.removeFirst();
 		currentTaxi.setStatus(WaitingTaxi.WAITING_CONFIRM);
 		System.out.println("Forwarding taxi request from "+currentRequest.getId()+" to "+currentTaxi.getId());
-		return new TaxiMessage(TaxiMessage.DISPATCHER, currentTaxi.getId(), TaxiMessage.tourOrder, currentRequest.getId(), currentRequest.getToPosition(), currentRequest.getFromPosition());
+		return new TaxiMessage(currentTaxi.getId(), TaxiMessage.DISPATCHER, TaxiMessage.tourOrder, currentRequest.getId(), currentRequest.getToPosition(), currentRequest.getFromPosition());
 	}
 
 	public void setOnDuty() {
