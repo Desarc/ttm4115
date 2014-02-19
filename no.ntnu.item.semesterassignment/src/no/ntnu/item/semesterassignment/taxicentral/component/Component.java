@@ -9,6 +9,10 @@ public class Component extends Block {
 		return message.getTo();
 	}
 
+	public String dispatcherId() {
+		return "DISPATCHER";
+	}
+
 
 
 }
