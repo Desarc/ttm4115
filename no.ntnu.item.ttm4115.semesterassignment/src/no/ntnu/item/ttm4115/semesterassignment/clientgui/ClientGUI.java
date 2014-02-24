@@ -29,8 +29,11 @@ public class ClientGUI extends Block {
 	private JTextField address;
 	private JTextArea confirmation;
 	
+	private String id;
+	
 	public void show(String alias) {
-		frame = new JFrame("ID: "+alias);
+		this.id = alias;
+		frame = new JFrame(id);
 		frame.setBounds(200, 200, 450, 300);
 		frame.getContentPane().setLayout(new BorderLayout());
 		frame.addWindowListener(new WindowListener() {
@@ -110,5 +113,9 @@ public class ClientGUI extends Block {
     	cal.getTime();
     	SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
 		confirmation.setText(confirmation.getText()+"\n"+sdf.format(cal.getTime())+": "+message);
+	}
+
+	public void displayLocation(String location) {
+		frame.setTitle(id+": "+location);
 	}
 }
