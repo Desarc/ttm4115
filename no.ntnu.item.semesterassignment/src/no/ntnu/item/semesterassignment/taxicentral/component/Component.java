@@ -9,7 +9,7 @@ public class Component extends Block {
 		return message.getTo();
 	}
 	
-	public String getSimulatorTopic() {
+	public String getMapTopic() {
 		return TaxiMessage.MAP;
 	}
 
@@ -27,6 +27,14 @@ public class Component extends Block {
 
 	public String getSimulatorId() {
 		return TaxiMessage.SIMULATOR;
+	}
+
+	public void startFailed(String error) {
+		System.out.println("Start failed: "+error);
+	}
+
+	public void connectionLost(String error) {
+		System.out.println("Connection lost: "+error);
 	}
 
 

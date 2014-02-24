@@ -24,13 +24,16 @@ public class TaxiFleetSimulator extends Block {
 
 	private Position convertPosition(String position) {
 		int commaIndex = position.indexOf(",");
-		return new Position(Double.parseDouble(position.substring(0, commaIndex)), Double.parseDouble(position.substring(commaIndex+1)));
+		return new Position(Double.parseDouble(position.substring(0, commaIndex))*1E6, Double.parseDouble(position.substring(commaIndex+1))*1E6);
 	}
 	
 	public MapUpdate updateMap(TaxiPosition position) {
 		System.out.println("Putting "+position.getTaxiId()+" on the map with position "+position.getPosition());
 		MapUpdate m = new MapUpdate();
-		m.addMarker(Marker.createMarker(position.getTaxiId()).title(position.getTaxiId()).position(convertPosition(position.getPosition())));
+		Position p = convertPosition(position.getPosition());
+		m.addMarker(Marker.createMarker(position.getTaxiId()).title(position.getTaxiId()).position(p));
+		m.setCenter(p);
+		m.setZoom(10);
 		return m;
 	}
 
