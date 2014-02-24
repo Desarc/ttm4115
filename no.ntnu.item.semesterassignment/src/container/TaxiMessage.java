@@ -3,6 +3,8 @@ package container;
 public class TaxiMessage {
 	
 	public static final String DISPATCHER = "DISPATCHER";
+	public static final String SIMULATOR = "SIMULATOR";
+	public static final String MAP = "MAP";
 
 	public static final String onDuty = "ON_DUTY";					//no data
 	public static final String offDuty = "OFF_DUTY";				//no data
@@ -14,6 +16,8 @@ public class TaxiMessage {
 	public static final String requestConfirm = "REQUEST_CONFIRM";	//data1: taxiId, data2: estimatedTime
 	public static final String queueNo = "QUEUE_NO";				//data1: queueNo
 	public static final String tourOrder = "TOUR_ORDER";			//data1: userId, data2: toPosition, data3: fromPosition
+	public static final String addToMap = "ADD_TO_MAP";				//data1: taxiId, data2: position
+	public static final String simulateTrip = "SIMULATE_TRIP";		//data1: taxiId, data2: destination
 	
 	String to;
 	String from;

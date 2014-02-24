@@ -88,6 +88,7 @@ public class TaxiDispatcher extends Block {
 	public String setAvailable() {
 		currentTaxi = allTaxis.get(currentMessage.getFrom());
 		currentTaxi.setStatus(WaitingTaxi.AVAILABLE);
+		currentTaxi.setPosition(currentMessage.getData1());
 		if (taxiQueue.size() == 0 && requestQueue.size() != 0) {
 			return REQUEST_WAITING;
 		}
@@ -127,6 +128,10 @@ public class TaxiDispatcher extends Block {
 		currentRequest = requestQueue.removeFirst();
 		System.out.println("Forwarding taxi request from "+currentRequest.getId()+" to "+currentTaxi.getId());
 		return new TaxiMessage(currentTaxi.getId(), TaxiMessage.DISPATCHER, TaxiMessage.tourOrder, currentRequest.getId(), currentRequest.getToPosition(), currentRequest.getFromPosition());
+	}
+
+	public TaxiMessage addToMap() {
+		return new TaxiMessage(TaxiMessage.SIMULATOR, TaxiMessage.DISPATCHER, TaxiMessage.addToMap, currentTaxi.getId(), currentTaxi.getPosition());		
 	}
 
 }

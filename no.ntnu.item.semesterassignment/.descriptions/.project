@@ -4,9 +4,13 @@
     uuid="_kIEogJSyEeOzs7hpNEuEjQ" 
     >
     <dependencies>
+        <dependency name="com.bitreactive.library.genericmapui" uuid="_ufQLEJFhEeKUbpabydPWtg" version="1.1.0"/>
         <dependency name="com.bitreactive.library.gson" uuid="_bCjFUFtTEeGtaPY7WHS-jQ" version="1.2.1"/>
         <dependency name="com.bitreactive.library.mqtt" uuid="_iVDkMOJLEeGulKFN7xtCsw" version="1.5.0"/>
         <dependency name="no.ntnu.item.arctis.library.sessions" uuid="_ux8bAGJMEeGZ-NNKhUo_kg" version="1.5.1"/>
         <dependency name="no.ntnu.item.ttm4115.gui" uuid="_9DmKkJS1EeOzs7hpNEuEjQ" version="1.0.0"/>
+        <dependency name="no.ntnu.item.ttm4115.library.motionsimulator" uuid="_zyD0kKKQEeKC2Y_rDtDvdQ" version="1.2.0"/>
+        <dependency name="no.ntnu.item.ttm4115.library.routeplanner" uuid="_oo35oKKQEeKC2Y_rDtDvdQ" version="1.1.0"/>
+        <dependency name="no.ntnu.item.ttm4115.semesterassignment" uuid="_Qf5JQJjqEeO5horfgX95HA" version="1.0.0"/>
     </dependencies>
 </project>

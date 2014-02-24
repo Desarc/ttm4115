@@ -7,6 +7,9 @@
     >
     <required>
         <block name="c0" uuid="_2gG6UJSzEeOzs7hpNEuEjQ"/>
-        <block name="c1" uuid="_rnJlsJiCEeOU-MmdO5Mh7A"/>
+        <block name="c1" uuid="_kh_M4ZleEeO3l85HQfyneQ"/>
+        <block name="c2" uuid="_bZezIp02EeOyMuUDNzG28w"/>
+        <block name="c3" uuid="_Jpk7gZ05EeOyMuUDNzG28w"/>
+        <block name="c4" uuid="_kh_M4ZleEeO3l85HQfyneQ"/>
     </required>
 </block>

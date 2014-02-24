@@ -11,6 +11,22 @@ public class TaxiClient extends Block {
 	final String ONLINE_UNAVAIL = "Online, not available";
 	final String ORDER_WAITING = "Online, TourOrder waiting";
 	final String DRIVING = "Online, driving";
+	
+	public static final String NTNUGløs = "63.419437,10.402002";
+	public static final String NTNUDragvoll = "63.408412,10.469792";
+	public static final String TrondheimSpektrum = "63.427587,10.376489";
+	public static final String MoholtStudBy = "63.411121,10.43237";
+	public static final String VollStudBy = "63.409719,10.446918";
+	public static final String Sirkus = "63.436158,10.455931";
+	public static final String Værnes = "63.454307,10.91751";
+	public static final String Granåsen = "63.377121,10.308001";
+	public static final String CitySyd = "63.361905,10.377009";
+	public static final String IKEA = "63.428653,10.472796";
+	public static final String TrondheimTorg = "63.430524,10.395059";
+	public static final String NidarosDomen = "63.426935,10.396432";
+	
+	private String[] locations = {NTNUGløs, NTNUDragvoll, TrondheimSpektrum, MoholtStudBy, VollStudBy, Sirkus, Værnes, Granåsen, CitySyd, IKEA, TrondheimTorg, NidarosDomen};
+	
 
 	public String taxiId;
 	public TaxiRequest currentRequest;
@@ -36,12 +52,17 @@ public class TaxiClient extends Block {
 		return new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.offDuty);
 	}
 	
+	private String selectRandomLocation() {
+		int rand = (int)(Math.random()*locations.length);
+		return locations[rand];
+	}
+	
 	public TaxiMessage generateAvailable() {
 		if (state.equals(ONLINE_UNAVAIL) || state.equals(DRIVING)) {
 			System.out.println("Setting status to available.");
 			state = ONLINE_AVAIL;
 		}
-		return new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.available);
+		return new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.available, selectRandomLocation());
 	}
 	
 	public TaxiMessage generateUnavailable() {

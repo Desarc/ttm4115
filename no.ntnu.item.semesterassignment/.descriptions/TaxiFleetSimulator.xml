@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<block
+    name="TaxiFleetSimulator" 
+    uuid="_bZezIp02EeOyMuUDNzG28w" 
+    status="under construction" 
+    type="block" 
+    >
+    <required>
+        <block name="c0" uuid="_yd708J0wEeOspvMODXrgoQ"/>
+    </required>
+</block>

@@ -5,11 +5,15 @@ import no.ntnu.item.arctis.runtime.Block;
 
 public class Component extends Block {
 
-	public String getTopic(TaxiMessage message) {
+	public String getDispatcherTopic(TaxiMessage message) {
 		return message.getTo();
 	}
+	
+	public String getSimulatorTopic() {
+		return TaxiMessage.MAP;
+	}
 
-	public String dispatcherId() {
+	public String getDispatcherId() {
 		return TaxiMessage.DISPATCHER;
 	}
 
@@ -19,6 +23,10 @@ public class Component extends Block {
 
 	public void publishError(String error) {
 		System.out.println("Publish error: "+error);
+	}
+
+	public String getSimulatorId() {
+		return TaxiMessage.SIMULATOR;
 	}
 
 
