@@ -12,14 +12,10 @@
           <transition xmi:id="_kh_M6ZleEeO3l85HQfyneQ" name="disconnect / " source="_kh_M-JleEeO3l85HQfyneQ" target="_kh_M-pleEeO3l85HQfyneQ"/>
           <transition xmi:id="_kh_M6pleEeO3l85HQfyneQ" name=" / connectionLost" source="_kh_M-JleEeO3l85HQfyneQ" target="_kh_M_JleEeO3l85HQfyneQ"/>
           <transition xmi:id="_kh_M65leEeO3l85HQfyneQ" name=" / message" source="_kh_M-JleEeO3l85HQfyneQ" target="_kh_M-JleEeO3l85HQfyneQ"/>
-          <transition xmi:id="_kh_M7JleEeO3l85HQfyneQ" name="publish / " source="_kh_M-JleEeO3l85HQfyneQ" target="_kh_M-JleEeO3l85HQfyneQ"/>
-          <transition xmi:id="_kh_M7ZleEeO3l85HQfyneQ" name=" / message; publish" source="_kh_M-JleEeO3l85HQfyneQ" target="_kh_M-JleEeO3l85HQfyneQ"/>
           <transition xmi:id="_kh_M7pleEeO3l85HQfyneQ" name=" / message; disconnect" source="_kh_M-JleEeO3l85HQfyneQ" target="_kh_M-pleEeO3l85HQfyneQ"/>
           <transition xmi:id="_kh_M75leEeO3l85HQfyneQ" name=" / publishError" source="_kh_M-JleEeO3l85HQfyneQ" target="_kh_M-JleEeO3l85HQfyneQ"/>
           <transition xmi:id="_kh_M8JleEeO3l85HQfyneQ" name=" / publishedOk" source="_kh_M-JleEeO3l85HQfyneQ" target="_kh_M-JleEeO3l85HQfyneQ"/>
           <transition xmi:id="_kh_M8ZleEeO3l85HQfyneQ" name=" / connectionLost" source="_kh_M-pleEeO3l85HQfyneQ" target="_kh_M_ZleEeO3l85HQfyneQ"/>
-          <transition xmi:id="_kh_M8pleEeO3l85HQfyneQ" name="setPublishTopic / " source="_kh_M-JleEeO3l85HQfyneQ" target="_kh_M-JleEeO3l85HQfyneQ"/>
-          <transition xmi:id="_kh_M85leEeO3l85HQfyneQ" name=" / message; setPublishTopic" source="_kh_M-JleEeO3l85HQfyneQ" target="_kh_M-JleEeO3l85HQfyneQ"/>
           <transition xmi:id="_kh_M9JleEeO3l85HQfyneQ" name=" / message; setPublishTopic+publish" source="_kh_M-JleEeO3l85HQfyneQ" target="_kh_M-JleEeO3l85HQfyneQ"/>
           <transition xmi:id="_kh_M9ZleEeO3l85HQfyneQ" name="publish+setPublishTopic / " source="_kh_M-JleEeO3l85HQfyneQ" target="_kh_M-JleEeO3l85HQfyneQ"/>
           <subvertex xmi:type="uml:Pseudostate" xmi:id="_kh_M9pleEeO3l85HQfyneQ" name="&lt;initial>"/>
@@ -364,14 +360,10 @@
   <arctis:event xmi:id="_kh_06ZleEeO3l85HQfyneQ" base_Transition="_kh_M6ZleEeO3l85HQfyneQ" triggers="_kh_0NZleEeO3l85HQfyneQ"/>
   <arctis:event xmi:id="_kh_06pleEeO3l85HQfyneQ" base_Transition="_kh_M6pleEeO3l85HQfyneQ" effects="_kh_0OpleEeO3l85HQfyneQ"/>
   <arctis:event xmi:id="_kh_065leEeO3l85HQfyneQ" base_Transition="_kh_M65leEeO3l85HQfyneQ" effects="_kh_0JpleEeO3l85HQfyneQ"/>
-  <arctis:event xmi:id="_kh_07JleEeO3l85HQfyneQ" base_Transition="_kh_M7JleEeO3l85HQfyneQ" triggers="_kh_0G5leEeO3l85HQfyneQ"/>
-  <arctis:event xmi:id="_kh_07ZleEeO3l85HQfyneQ" base_Transition="_kh_M7ZleEeO3l85HQfyneQ" effects="_kh_0JpleEeO3l85HQfyneQ _kh_0G5leEeO3l85HQfyneQ"/>
   <arctis:event xmi:id="_kh_07pleEeO3l85HQfyneQ" base_Transition="_kh_M7pleEeO3l85HQfyneQ" effects="_kh_0JpleEeO3l85HQfyneQ _kh_0NZleEeO3l85HQfyneQ"/>
   <arctis:event xmi:id="_kh_075leEeO3l85HQfyneQ" base_Transition="_kh_M75leEeO3l85HQfyneQ" effects="_kh_0OJleEeO3l85HQfyneQ"/>
   <arctis:event xmi:id="_kh_08JleEeO3l85HQfyneQ" base_Transition="_kh_M8JleEeO3l85HQfyneQ" effects="_kh_0N5leEeO3l85HQfyneQ"/>
   <arctis:event xmi:id="_kh_08ZleEeO3l85HQfyneQ" base_Transition="_kh_M8ZleEeO3l85HQfyneQ" effects="_kh_0OpleEeO3l85HQfyneQ"/>
-  <arctis:event xmi:id="_kh_08pleEeO3l85HQfyneQ" base_Transition="_kh_M8pleEeO3l85HQfyneQ" triggers="_kh_0NpleEeO3l85HQfyneQ"/>
-  <arctis:event xmi:id="_kh_085leEeO3l85HQfyneQ" base_Transition="_kh_M85leEeO3l85HQfyneQ" effects="_kh_0JpleEeO3l85HQfyneQ _kh_0NpleEeO3l85HQfyneQ"/>
   <graphics:Shape xmi:id="_kh_09JleEeO3l85HQfyneQ" aux1="590 0 0 -22 " base_Element="_kh_0CZleEeO3l85HQfyneQ"/>
   <graphics:Shape xmi:id="_kh_09ZleEeO3l85HQfyneQ" aux1="0 39 -111 0 " base_Element="_kh_z_pleEeO3l85HQfyneQ"/>
   <graphics:Shape xmi:id="_kh_09pleEeO3l85HQfyneQ" aux1="94 0 0 -22 " base_Element="_kh_z_5leEeO3l85HQfyneQ"/>

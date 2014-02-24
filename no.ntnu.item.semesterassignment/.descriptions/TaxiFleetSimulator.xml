@@ -3,6 +3,7 @@
     name="TaxiFleetSimulator" 
     uuid="_bZezIp02EeOyMuUDNzG28w" 
     status="under construction" 
+    session="normal" 
     type="block" 
     >
     <required>
