@@ -7,20 +7,19 @@ public class UserClient extends Block {
 
 	public java.lang.String userId;
 
-	public static final String NTNUGløs = "63.419437,10.402002";
-	public static final String NTNUDragvoll = "63.408412,10.469792";
-	public static final String TrondheimSpektrum = "63.427587,10.376489";
-	public static final String MoholtStudBy = "63.411121,10.43237";
-	public static final String VollStudBy = "63.409719,10.446918";
-	public static final String Sirkus = "63.436158,10.455931";
-	public static final String Værnes = "63.454307,10.91751";
-	public static final String Granåsen = "63.377121,10.308001";
-	public static final String CitySyd = "63.361905,10.377009";
-	public static final String IKEA = "63.428653,10.472796";
-	public static final String TrondheimTorg = "63.430524,10.395059";
-	public static final String NidarosDomen = "63.426935,10.396432";
+	public static final String NTNUGløs = "Høgskoleringen 1, 7034 Trondheim, Norge";
+	public static final String NTNUDragvoll = "Loholt alle 85, 7049 Trondheim, Norge";
+	public static final String TrondheimSpektrum = "Klostergata 88, 7030 Trondheim, Norge";
+	public static final String MoholtStudBy = "Moholt Alle 3, 7050 Trondheim, Norge";
+	public static final String VollStudBy = "Vegamot 1, 7048 Trondheim, Norge";
+	public static final String Sirkus = "Thoning Owesens gate 31, 7044 Trondheim, Norge";
+	public static final String Granåsen = "Kongsvegen 204, 7026 Trondheim, Norge";
+	public static final String CitySyd = "Østre Rosten 28, 7075 Tiller, Norge";
+	public static final String IKEA = "Landbruksvegen 2, 7047 Trondheim, Norge";
+	public static final String TrondheimTorg = "Kongens gate 22B, 7011 Trondheim, Norge";
+	public static final String NidarosDomen = "Kongsgårdsgata 1, 7013 Trondheim, Norge";
 	
-	private String[] locations = {NTNUGløs, NTNUDragvoll, TrondheimSpektrum, MoholtStudBy, VollStudBy, Sirkus, Værnes, Granåsen, CitySyd, IKEA, TrondheimTorg, NidarosDomen};
+	private String[] locations = {NTNUGløs, NTNUDragvoll, TrondheimSpektrum, MoholtStudBy, VollStudBy, Sirkus, Granåsen, CitySyd, IKEA, TrondheimTorg, NidarosDomen};
 
 	public java.lang.String location;
 	
