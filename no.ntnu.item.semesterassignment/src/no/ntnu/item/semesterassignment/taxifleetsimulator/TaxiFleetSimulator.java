@@ -33,8 +33,15 @@ public class TaxiFleetSimulator extends Block {
 		Position p = convertPosition(position.getPosition());
 		m.addMarker(Marker.createMarker(position.getTaxiId()).title(position.getTaxiId()).position(p));
 		m.setCenter(p);
-		m.setZoom(10);
+		m.setZoom(11);
 		return m;
+	}
+
+	public MapUpdate modifyUpdate(MapUpdate update) {
+		if (update.getMarkers().size() > 0) {
+			update.setCenter(update.getMarkers().get(0).getPosition());
+		}
+		return update;
 	}
 
 }

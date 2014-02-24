@@ -27,8 +27,8 @@ public class TaxiSimulator extends Block {
 	}
 
 	public void setPosition(MapUpdate newPosition) {
-		if (newPosition.getCenter() != null) {
-			this.currentPosition = newPosition.getCenter().getLatitude()+","+newPosition.getCenter().getLongitude();
+		if (newPosition.getMarkers().size() > 0) {
+			this.currentPosition = newPosition.getMarkers().get(0).getPosition().getLatitude()+","+newPosition.getMarkers().get(0).getPosition().getLongitude();
 			System.out.println("New position for "+newPosition.getMarkers().get(0).getId()+": "+currentPosition);
 		}
 	}
