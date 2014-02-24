@@ -134,4 +134,9 @@ public class TaxiDispatcher extends Block {
 		return new TaxiMessage(TaxiMessage.SIMULATOR, TaxiMessage.DISPATCHER, TaxiMessage.addToMap, currentTaxi.getId(), currentTaxi.getPosition());		
 	}
 
+	public TaxiMessage simulate() {
+		System.out.println("Order confirmed, simulating "+currentTaxi.getId()+" from "+currentMessage.getData3()+" to "+currentMessage.getData2());
+		return new TaxiMessage(TaxiMessage.SIMULATOR, TaxiMessage.DISPATCHER, TaxiMessage.simulateTrip, currentTaxi.getId(), currentMessage.getData2());
+	}
+
 }

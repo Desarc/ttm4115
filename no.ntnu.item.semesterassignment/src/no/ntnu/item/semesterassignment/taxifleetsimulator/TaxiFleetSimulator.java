@@ -28,6 +28,7 @@ public class TaxiFleetSimulator extends Block {
 	}
 	
 	public MapUpdate updateMap(TaxiPosition position) {
+		System.out.println("Putting "+position.getTaxiId()+" on the map with position "+position.getPosition());
 		MapUpdate m = new MapUpdate();
 		m.addMarker(Marker.createMarker(position.getTaxiId()).title(position.getTaxiId()).position(convertPosition(position.getPosition())));
 		return m;

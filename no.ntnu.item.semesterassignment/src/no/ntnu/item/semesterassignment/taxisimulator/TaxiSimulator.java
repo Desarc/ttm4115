@@ -28,11 +28,20 @@ public class TaxiSimulator extends Block {
 
 	public void setPosition(MapUpdate newPosition) {
 		this.currentPosition = newPosition.getCenter().getLatitude()+","+newPosition.getCenter().getLongitude();
+		System.out.println("New position for "+newPosition.getMarkers().get(0).getId()+": "+currentPosition);
 	}
 
 	public void init(TaxiPosition position) {
 		this.alias_taxi = position.getTaxiId();
 		this.currentPosition = position.getPosition();
+	}
+
+	public void remoteError() {
+		System.out.println("Remote error (RoutePlanner).");
+	}
+
+	public void localError() {
+		System.out.println("Local error (RoutePlanner).");
 	}
 
 }

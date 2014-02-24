@@ -58,11 +58,12 @@ public class TaxiClient extends Block {
 	}
 	
 	public TaxiMessage generateAvailable() {
+		String location = selectRandomLocation();
 		if (state.equals(ONLINE_UNAVAIL) || state.equals(DRIVING)) {
-			System.out.println("Setting status to available.");
+			System.out.println("Setting status to available, location: "+location);
 			state = ONLINE_AVAIL;
 		}
-		return new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.available, selectRandomLocation());
+		return new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.available, location);
 	}
 	
 	public TaxiMessage generateUnavailable() {
