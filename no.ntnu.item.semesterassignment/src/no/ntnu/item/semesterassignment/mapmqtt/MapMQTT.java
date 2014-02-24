@@ -1,4 +1,4 @@
-package no.ntnu.item.semesterassignment.taximqtt;
+package no.ntnu.item.semesterassignment.mapmqtt;
 
 import java.nio.charset.Charset;
 import java.util.UUID;
@@ -6,11 +6,10 @@ import java.util.UUID;
 import com.bitreactive.library.mqtt.MQTTConfigParam;
 import com.bitreactive.library.mqtt.mqtt.MQTT.Message;
 
-import container.TaxiMessage;
 import no.ntnu.item.arctis.runtime.Block;
 
-public class TaxiMQTT extends Block {
-	
+public class MapMQTT extends Block {
+
 	private String baseTopic;
 	// Instance parameter. Edit only in overview page.
 	public final java.lang.String groupId;
@@ -38,18 +37,8 @@ public class TaxiMQTT extends Block {
 		return new String(message.getPayload());
 	}
 
-	public void deserializeError(String error) {
-		System.out.println("Deserialize error in TaxiMQTT: "+error);
-	}
-
-	public TaxiMessage toTaxiMessage(Object message) {
-		return (TaxiMessage)message;
-		
-	}
-
 	// Do not edit this constructor.
-	public TaxiMQTT(java.lang.String groupId) {
+	public MapMQTT(java.lang.String groupId) {
 	    this.groupId = groupId;
 	}
-
 }
