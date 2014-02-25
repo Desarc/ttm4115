@@ -18,7 +18,7 @@ public class Component extends Block {
 	}
 
 	public void publishOk() {
-		System.out.println("Publish Ok.");
+		//System.out.println("Publish Ok.");
 	}
 
 	public void publishError(String error) {

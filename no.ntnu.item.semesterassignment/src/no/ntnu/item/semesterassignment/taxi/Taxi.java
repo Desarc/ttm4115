@@ -21,7 +21,7 @@ public class Taxi extends Block {
 	}
 
 	public void publishedOk() {
-		System.out.println("Publish OK.");
+		//System.out.println("Publish OK.");
 	}
 
 	public void publishError(String error) {

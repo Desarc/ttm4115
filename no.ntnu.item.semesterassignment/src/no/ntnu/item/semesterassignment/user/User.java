@@ -25,7 +25,7 @@ public class User extends Block {
 	}
 
 	public void publishedOk() {
-		System.out.println("Publish Ok.");
+		//System.out.println("Publish Ok.");
 	}
 	
 }
