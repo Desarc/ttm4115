@@ -1,5 +1,7 @@
 package no.ntnu.item.ttm4115.semesterassignment.taximqtt;
 
+import java.nio.charset.Charset;
+import java.util.ArrayList;
 import java.util.UUID;
 
 import com.bitreactive.library.mqtt.MQTTConfigParam;
@@ -13,27 +15,44 @@ public class TaxiMQTT extends Block {
 	// Instance parameter. Edit only in overview page.
 	public final java.lang.String groupId;
 	
-	public MQTTConfigParam configureMQTT(String id) {
+	private ArrayList<String> getTopics(String topics) {
+		ArrayList<String> topicList = new ArrayList<String>();
+		topics.split(",");
+		return topicList;
+	}
+	
+	public MQTTConfigParam configureMQTT(String topics) {
 		baseTopic = "generic-map-ui-"+groupId;
 		String clientID = UUID.randomUUID().toString().substring(0, 20);
 		MQTTConfigParam param = new MQTTConfigParam("broker.mqttdashboard.com", 1883, clientID);
-		//param.addSubscribeTopic(baseTopic);
-		param.addSubscribeTopic(baseTopic+"/"+id);
+		ArrayList<String> topicList = getTopics(topics);
+		for (String topic : topicList) {
+			param.addSubscribeTopic(baseTopic+"/"+topic);			
+		}
 		param.setDefaultPublishTopic(baseTopic);
 		return param;
 	}
 	
-	public Message toMessage(byte[] data, String topic) {
+	public Message toMessage(String data, String topic) {
+		
 		if (topic == null || topic.isEmpty()) {
-			return new Message(data, baseTopic);
+			return new Message(data.getBytes(Charset.forName("UTF-8")), baseTopic);
 		}
 		else {
-			return new Message(data, baseTopic+"/"+topic);
+			return new Message(data.getBytes(Charset.forName("UTF-8")), baseTopic+"/"+topic);
 		}
 	}
 
 	// Do not edit this constructor.
 	public TaxiMQTT(java.lang.String groupId) {
 	    this.groupId = groupId;
+	}
+
+	public String getData(Message message) {
+		return new String(message.getPayload());
+	}
+
+	public String getTopic(Message message) {
+		return message.getTopic().substring(message.getTopic().indexOf(baseTopic)+baseTopic.length());
 	}
 }
