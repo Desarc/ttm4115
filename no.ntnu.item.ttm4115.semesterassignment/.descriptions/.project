@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project
     title="no.ntnu.item.ttm4115.semesterassignment" 
-    version="1.0.0" 
+    version="1.2.0" 
     uuid="_Qf5JQJjqEeO5horfgX95HA" 
+    purpose="GUI and MQTT blocks for the TTM4115 semester assignment 2014." 
     >
     <dependencies>
         <dependency name="com.bitreactive.library.genericmapui" uuid="_ufQLEJFhEeKUbpabydPWtg" version="1.1.0"/>
