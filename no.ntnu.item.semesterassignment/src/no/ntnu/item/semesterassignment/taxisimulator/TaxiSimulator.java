@@ -50,13 +50,13 @@ public class TaxiSimulator extends Block {
 	}
 
 	public Route readRoute(Route route) {
-		System.out.println(route.summary);
-		for (Leg leg : route.legs) {
-			for (Step step : leg.steps) {
-				System.out.println(step.start_location+" -> "+step.end_location);
-			}
-			System.out.println("\n");
-		}
+//		System.out.println(route.summary);
+//		for (Leg leg : route.legs) {
+//			for (Step step : leg.steps) {
+//				System.out.println(step.start_location.lat+","+step.start_location.lng+" -> "+step.end_location.lat+","+step.end_location.lng);
+//			}
+//			System.out.println("\n");
+//		}
 		return route;
 	}
 
