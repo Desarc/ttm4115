@@ -1,4 +1,4 @@
-package no.ntnu.item.ttm4115.semesterassignment.taxigui;
+package no.ntnu.item.ttm4115.semesterassignment.taxiclientgui;
 
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -17,7 +17,7 @@ import javax.swing.JTextArea;
 
 import no.ntnu.item.arctis.runtime.Block;
 
-public class TaxiGUI extends Block {
+public class TaxiClientGUI extends Block {
 
 	public final String ON_DUTY = "ON_DUTY";
 	public final String OFF_DUTY = "OFF_DUTY";

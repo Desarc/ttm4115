@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<block
+    name="TaxiClientGUI" 
+    uuid="_nhnIEZ4yEeODd6vx-eAt7g" 
+    status="published" 
+    type="block" 
+    >
+    <required>
+        <package name="no.ntnu.item.ttm4115.semesterassignment.taxiclientgui"/>
+    </required>
+</block>

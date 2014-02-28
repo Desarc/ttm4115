@@ -1,7 +1,8 @@
-package no.ntnu.item.ttm4115.semesterassignment.clientgui;
+package no.ntnu.item.ttm4115.semesterassignment.userclientgui;
 
-import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
@@ -19,13 +20,14 @@ import javax.swing.JTextField;
 
 import no.ntnu.item.arctis.runtime.Block;
 
-public class ClientGUI extends Block {
+public class UserClientGUI extends Block {
 
 	public final String REQUEST = "REQUEST";
 	public final String EXIT = "EXIT";
+	public final String CANCEL = "CANCEL";
 	
 	private JFrame frame;
-	private JButton request;
+	private JButton request, cancel;
 	private JTextField address;
 	private JTextArea confirmation;
 	
@@ -34,8 +36,8 @@ public class ClientGUI extends Block {
 	public void show(String alias) {
 		this.id = alias;
 		frame = new JFrame(id);
-		frame.setBounds(200, 200, 450, 300);
-		frame.getContentPane().setLayout(new BorderLayout());
+		frame.setBounds(200, 200, 450, 450);
+		frame.getContentPane().setLayout(new GridBagLayout());
 		frame.addWindowListener(new WindowListener() {
 
             @Override
@@ -67,15 +69,19 @@ public class ClientGUI extends Block {
 			}
         });
 		
+		GridBagConstraints c = new GridBagConstraints();
+		
+		c.gridwidth = 2;
 		confirmation = new JTextArea();
 		confirmation.setEditable(false);
 		JScrollPane textScroll = new JScrollPane(confirmation);
-		textScroll.setPreferredSize(new Dimension(300, 250));
-		frame.add(textScroll, BorderLayout.NORTH);
+		textScroll.setPreferredSize(new Dimension(450, 300));
+		frame.add(textScroll, c);
 		
 		final String defaultText = "Type address...";
 		address = new JTextField(defaultText);
 		address.setEditable(true);
+		address.setPreferredSize(new Dimension(450, 40));
 		address.addFocusListener(new FocusListener() {
 		    public void focusGained(FocusEvent e) {
 		    	if (address.getText().equals(defaultText)) {
@@ -89,9 +95,11 @@ public class ClientGUI extends Block {
 		    	}
 		    }
 		});
-		frame.add(address, BorderLayout.CENTER);
+		c.gridy = 1;
+		frame.add(address, c);
 		
 		request = new JButton("Request taxi");
+		request.setPreferredSize(new Dimension(225, 40));
 		request.addActionListener(new ActionListener() {
 			
 			@Override
@@ -102,7 +110,21 @@ public class ClientGUI extends Block {
 				}
 			}
 		});
-		frame.add(request, BorderLayout.SOUTH);
+		c.gridwidth = 1;
+		c.gridy = 2;
+		frame.add(request, c);
+		
+		cancel = new JButton("Cancel");
+		cancel.setPreferredSize(new Dimension(225, 40));
+		cancel.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				sendToBlock(CANCEL);
+			}
+		});
+		c.gridx = 1;
+		frame.add(cancel, c);
 		
 		frame.pack();
 		frame.setVisible(true);
