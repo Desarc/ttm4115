@@ -14,12 +14,29 @@ public class MapMQTT extends Block {
 	// Instance parameter. Edit only in overview page.
 	public final java.lang.String groupId;
 	
-	public MQTTConfigParam configureMQTT(String id) {
+	private String[] getTopics(String topics) {
+		String[] topicList = topics.split(",");
+		return topicList;
+	}
+	
+	public MQTTConfigParam configureMQTT(String topics) {
 		baseTopic = "generic-map-ui-"+groupId;
 		String clientID = UUID.randomUUID().toString().substring(0, 20);
 		MQTTConfigParam param = new MQTTConfigParam("broker.mqttdashboard.com", 1883, clientID);
-		//param.addSubscribeTopic(baseTopic);
-		param.addSubscribeTopic(baseTopic+"/"+id);
+		if (topics == null || topics.isEmpty()) {
+			param.addSubscribeTopic(baseTopic);
+		}
+		else {
+			String[] topicList = getTopics(topics);
+			for (String topic : topicList) {
+				if (topic.equals("")) {
+					param.addSubscribeTopic(baseTopic);
+				}
+				else {
+					param.addSubscribeTopic(baseTopic+"/"+topic);			
+				}
+			}
+		}
 		param.setDefaultPublishTopic(baseTopic);
 		return param;
 	}

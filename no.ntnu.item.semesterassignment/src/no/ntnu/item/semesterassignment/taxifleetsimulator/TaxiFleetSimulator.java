@@ -38,10 +38,10 @@ public class TaxiFleetSimulator extends Block {
 	}
 
 	public MapUpdate modifyUpdate(MapUpdate update) {
-		for (Marker marker : update.getMarkers()) {
-			marker.position(new Position(marker.getPosition().getLatitude()*1E6, marker.getPosition().getLongitude()*1E6));
-			//System.out.println(marker.getPosition().getLatitude()+","+marker.getPosition().getLongitude()+"\n");
-		}
+//		for (Marker marker : update.getMarkers()) {
+//			marker.position(new Position(marker.getPosition().getLatitude()*1E6, marker.getPosition().getLongitude()*1E6));
+//			//System.out.println(marker.getPosition().getLatitude()+","+marker.getPosition().getLongitude()+"\n");
+//		}
 		return update;
 	}
 

@@ -1,7 +1,6 @@
 package no.ntnu.item.ttm4115.semesterassignment.taximqtt;
 
 import java.nio.charset.Charset;
-import java.util.ArrayList;
 import java.util.UUID;
 
 import com.bitreactive.library.mqtt.MQTTConfigParam;
@@ -15,9 +14,8 @@ public class TaxiMQTT extends Block {
 	// Instance parameter. Edit only in overview page.
 	public final java.lang.String groupId;
 	
-	private ArrayList<String> getTopics(String topics) {
-		ArrayList<String> topicList = new ArrayList<String>();
-		topics.split(",");
+	private String[] getTopics(String topics) {
+		String[] topicList = topics.split(",");
 		return topicList;
 	}
 	
@@ -29,7 +27,7 @@ public class TaxiMQTT extends Block {
 			param.addSubscribeTopic(baseTopic);
 		}
 		else {
-			ArrayList<String> topicList = getTopics(topics);
+			String[] topicList = getTopics(topics);
 			for (String topic : topicList) {
 				if (topic.equals("")) {
 					param.addSubscribeTopic(baseTopic);
