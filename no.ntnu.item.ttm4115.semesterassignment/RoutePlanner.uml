@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arctis="http:///schemas/arctis/_WFTqUHjGEdyxtoUMycQn9Q/10" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:graphics="http:///schemas/graphics/_gd9EwIuAEdytfOWtpACIqw/6" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/arctis/_WFTqUHjGEdyxtoUMycQn9Q/10 pathmap://ARCTIS_PROFILES/arctis.profile.uml#_WFTqUXjGEdyxtoUMycQn9Q http:///schemas/graphics/_gd9EwIuAEdytfOWtpACIqw/6 pathmap://RAMSES_GRAPHIC_PROFILES/no.ntnu.item.ramses.graphicprofile.uml#_geG1wIuAEdytfOWtpACIqw">
+  <uml:Package xmi:id="_IZqGkKItEeOynos5YFQKig" name="no.ntnu.item.ttm4115.semesterassignment">
+    <packagedElement xmi:type="uml:Activity" xmi:id="_IZqGkaItEeOynos5YFQKig" name="Route Planner" classifierBehavior="_IZqGkqItEeOynos5YFQKig" group="_IZqGqKItEeOynos5YFQKig" partition="_IZqGqKItEeOynos5YFQKig" node="_IZqGsKItEeOynos5YFQKig _IZqGs6ItEeOynos5YFQKig _IZqGtKItEeOynos5YFQKig _IZqGuaItEeOynos5YFQKig _IZqGwKItEeOynos5YFQKig _IZqGwaItEeOynos5YFQKig _IZqGwqItEeOynos5YFQKig _IZqGw6ItEeOynos5YFQKig">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_IZqGkqItEeOynos5YFQKig" name="Route Planner">
+        <region xmi:id="_IZqGk6ItEeOynos5YFQKig" name="&lt;region>">
+          <transition xmi:id="_IZqGlKItEeOynos5YFQKig" name="journey / " source="_IZqGmKItEeOynos5YFQKig" target="_IZqGmaItEeOynos5YFQKig"/>
+          <transition xmi:id="_IZqGlaItEeOynos5YFQKig" name=" / route" source="_IZqGmaItEeOynos5YFQKig" target="_IZqGmqItEeOynos5YFQKig"/>
+          <transition xmi:id="_IZqGlqItEeOynos5YFQKig" name=" / remoteError" source="_IZqGmaItEeOynos5YFQKig" target="_IZqGm6ItEeOynos5YFQKig"/>
+          <transition xmi:id="_IZqGl6ItEeOynos5YFQKig" name=" / localError" source="_IZqGmaItEeOynos5YFQKig" target="_IZqGnKItEeOynos5YFQKig"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_IZqGmKItEeOynos5YFQKig" name="&lt;initial>"/>
+          <subvertex xmi:type="uml:State" xmi:id="_IZqGmaItEeOynos5YFQKig" name="active"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_IZqGmqItEeOynos5YFQKig" name="&lt;final>"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_IZqGm6ItEeOynos5YFQKig" name="&lt;final>"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_IZqGnKItEeOynos5YFQKig" name="&lt;final>"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_IZqGnaItEeOynos5YFQKig" name="createURI"/>
+      <ownedOperation xmi:id="_IZqGnqItEeOynos5YFQKig" name="stop"/>
+      <ownedOperation xmi:id="_IZqGn6ItEeOynos5YFQKig" name="testObject"/>
+      <ownedOperation xmi:id="_IZqGoKItEeOynos5YFQKig" name="printJson"/>
+      <ownedOperation xmi:id="_IZqGoaItEeOynos5YFQKig" name="getRoute"/>
+      <ownedOperation xmi:id="_IZqGoqItEeOynos5YFQKig" name="getTaxiId"/>
+      <ownedOperation xmi:id="_IZqGo6ItEeOynos5YFQKig" name="setTaxiId"/>
+      <ownedParameter xmi:id="_IZqGpKItEeOynos5YFQKig" name="journey" type="_6T_W8KItEeOynos5YFQKig"/>
+      <ownedParameter xmi:id="_IZqGpaItEeOynos5YFQKig" name="route" type="_6T_-AKItEeOynos5YFQKig" direction="out"/>
+      <ownedParameter xmi:id="_IZqGpqItEeOynos5YFQKig" name="remoteError" direction="out"/>
+      <ownedParameter xmi:id="_IZqGp6ItEeOynos5YFQKig" name="localError" direction="out"/>
+      <edge xmi:type="uml:ObjectFlow" xmi:id="_IZqGqaItEeOynos5YFQKig" name="e1" inPartition="_IZqGqKItEeOynos5YFQKig" source="_IZqGs6ItEeOynos5YFQKig" target="_IZqGsaItEeOynos5YFQKig"/>
+      <edge xmi:type="uml:ObjectFlow" xmi:id="_IZqGqqItEeOynos5YFQKig" name="e2" inPartition="_IZqGqKItEeOynos5YFQKig" source="_IZqGsqItEeOynos5YFQKig" target="_IZqGtaItEeOynos5YFQKig"/>
+      <edge xmi:type="uml:ObjectFlow" xmi:id="_IZqGq6ItEeOynos5YFQKig" name="e0" inPartition="_IZqGqKItEeOynos5YFQKig" source="_IZqGvqItEeOynos5YFQKig" target="_IZqGxKItEeOynos5YFQKig"/>
+      <edge xmi:type="uml:ObjectFlow" xmi:id="_IZqGrKItEeOynos5YFQKig" name="e3" inPartition="_IZqGqKItEeOynos5YFQKig" source="_IZqGuKItEeOynos5YFQKig" target="_IZqGu6ItEeOynos5YFQKig"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_IZqGraItEeOynos5YFQKig" name="e4" inPartition="_IZqGqKItEeOynos5YFQKig" source="_IZqGt6ItEeOynos5YFQKig" target="_IZqGwaItEeOynos5YFQKig"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_IZqGrqItEeOynos5YFQKig" name="e5" inPartition="_IZqGqKItEeOynos5YFQKig" source="_IZqGtqItEeOynos5YFQKig" target="_IZqGwqItEeOynos5YFQKig"/>
+      <edge xmi:type="uml:ObjectFlow" xmi:id="_IZqGr6ItEeOynos5YFQKig" name="e6" inPartition="_IZqGqKItEeOynos5YFQKig" source="_IZqGxaItEeOynos5YFQKig" target="_IZqGwKItEeOynos5YFQKig"/>
+      <group xmi:type="uml:ActivityPartition" xmi:id="_IZqGqKItEeOynos5YFQKig" name="main" node="_IZqGsKItEeOynos5YFQKig _IZqGsqItEeOynos5YFQKig _IZqGsaItEeOynos5YFQKig _IZqGs6ItEeOynos5YFQKig _IZqGtKItEeOynos5YFQKig _IZqGtaItEeOynos5YFQKig _IZqGtqItEeOynos5YFQKig _IZqGt6ItEeOynos5YFQKig _IZqGuKItEeOynos5YFQKig _IZqGuaItEeOynos5YFQKig _IZqGu6ItEeOynos5YFQKig _IZqGvqItEeOynos5YFQKig _IZqGv6ItEeOynos5YFQKig _IZqGwKItEeOynos5YFQKig _IZqGwaItEeOynos5YFQKig _IZqGwqItEeOynos5YFQKig _IZqGw6ItEeOynos5YFQKig _IZqGxaItEeOynos5YFQKig _IZqGxKItEeOynos5YFQKig" edge="_IZqGqaItEeOynos5YFQKig _IZqGqqItEeOynos5YFQKig _IZqGq6ItEeOynos5YFQKig _IZqGrKItEeOynos5YFQKig _IZqGraItEeOynos5YFQKig _IZqGrqItEeOynos5YFQKig _IZqGr6ItEeOynos5YFQKig"/>
+      <node xmi:type="uml:CallOperationAction" xmi:id="_IZqGsKItEeOynos5YFQKig" name="o0" inPartition="_IZqGqKItEeOynos5YFQKig" operation="_IZqGnaItEeOynos5YFQKig">
+        <argument xmi:id="_IZqGsaItEeOynos5YFQKig" name="journey" inPartition="_IZqGqKItEeOynos5YFQKig" incoming="_IZqGqaItEeOynos5YFQKig" type="_6T_W8KItEeOynos5YFQKig"/>
+        <result xmi:id="_IZqGsqItEeOynos5YFQKig" name="" inPartition="_IZqGqKItEeOynos5YFQKig" outgoing="_IZqGqqItEeOynos5YFQKig" type="_IZqGxqItEeOynos5YFQKig"/>
+      </node>
+      <node xmi:type="uml:ActivityParameterNode" xmi:id="_IZqGs6ItEeOynos5YFQKig" name="journey" inPartition="_IZqGqKItEeOynos5YFQKig" outgoing="_IZqGqaItEeOynos5YFQKig" type="_6T_W8KItEeOynos5YFQKig" parameter="_IZqGpKItEeOynos5YFQKig"/>
+      <node xmi:type="uml:CallBehaviorAction" xmi:id="_IZqGtKItEeOynos5YFQKig" name="c0" inPartition="_IZqGqKItEeOynos5YFQKig" behavior="_3eyDYSAhEeGi8L4nucummA">
+        <argument xmi:id="_IZqGtaItEeOynos5YFQKig" name="get" inPartition="_IZqGqKItEeOynos5YFQKig" incoming="_IZqGqqItEeOynos5YFQKig" type="_IZqGxqItEeOynos5YFQKig"/>
+        <result xmi:id="_IZqGtqItEeOynos5YFQKig" name="localError" inPartition="_IZqGqKItEeOynos5YFQKig" outgoing="_IZqGrqItEeOynos5YFQKig"/>
+        <result xmi:id="_IZqGt6ItEeOynos5YFQKig" name="remoteError" inPartition="_IZqGqKItEeOynos5YFQKig" outgoing="_IZqGraItEeOynos5YFQKig" type="_IZqGxqItEeOynos5YFQKig"/>
+        <result xmi:id="_IZqGuKItEeOynos5YFQKig" name="response" inPartition="_IZqGqKItEeOynos5YFQKig" outgoing="_IZqGrKItEeOynos5YFQKig" type="_IZqGxqItEeOynos5YFQKig"/>
+      </node>
+      <node xmi:type="uml:CallBehaviorAction" xmi:id="_IZqGuaItEeOynos5YFQKig" name="c1" inPartition="_IZqGqKItEeOynos5YFQKig" behavior="_eOnYsVtTEeGtaPY7WHS-jQ">
+        <ownedComment xmi:id="_IZqGuqItEeOynos5YFQKig">
+          <body>GENERICS:T:no.ntnu.item.ttm4115.semesterassignment.routeplanner.Direction;</body>
+        </ownedComment>
+        <argument xmi:id="_IZqGu6ItEeOynos5YFQKig" name="json" inPartition="_IZqGqKItEeOynos5YFQKig" incoming="_IZqGrKItEeOynos5YFQKig" type="_IZqGxqItEeOynos5YFQKig"/>
+        <argument xmi:type="uml:ValuePin" xmi:id="_IZqGvKItEeOynos5YFQKig" name="targetClass" type="_IZqGxqItEeOynos5YFQKig">
+          <value xmi:type="uml:LiteralString" xmi:id="_CNRnYKIuEeOynos5YFQKig" name="targetClass" type="_IZqGxqItEeOynos5YFQKig" value="no.ntnu.item.ttm4115.semesterassignment.routeplanner.Direction"/>
+        </argument>
+        <result xmi:id="_IZqGvqItEeOynos5YFQKig" name="ok" inPartition="_IZqGqKItEeOynos5YFQKig" outgoing="_IZqGq6ItEeOynos5YFQKig" type="_6UAlEKItEeOynos5YFQKig"/>
+        <result xmi:id="_IZqGv6ItEeOynos5YFQKig" name="error" inPartition="_IZqGqKItEeOynos5YFQKig" type="_IZqGxqItEeOynos5YFQKig"/>
+      </node>
+      <node xmi:type="uml:ActivityParameterNode" xmi:id="_IZqGwKItEeOynos5YFQKig" name="route" inPartition="_IZqGqKItEeOynos5YFQKig" incoming="_IZqGr6ItEeOynos5YFQKig" type="_6T_-AKItEeOynos5YFQKig" parameter="_IZqGpaItEeOynos5YFQKig"/>
+      <node xmi:type="uml:ActivityParameterNode" xmi:id="_IZqGwaItEeOynos5YFQKig" name="remoteError" inPartition="_IZqGqKItEeOynos5YFQKig" incoming="_IZqGraItEeOynos5YFQKig" parameter="_IZqGpqItEeOynos5YFQKig"/>
+      <node xmi:type="uml:ActivityParameterNode" xmi:id="_IZqGwqItEeOynos5YFQKig" name="localError" inPartition="_IZqGqKItEeOynos5YFQKig" incoming="_IZqGrqItEeOynos5YFQKig" parameter="_IZqGp6ItEeOynos5YFQKig"/>
+      <node xmi:type="uml:CallOperationAction" xmi:id="_IZqGw6ItEeOynos5YFQKig" name="o1" inPartition="_IZqGqKItEeOynos5YFQKig" operation="_IZqGoaItEeOynos5YFQKig">
+        <argument xmi:id="_IZqGxKItEeOynos5YFQKig" name="dir" inPartition="_IZqGqKItEeOynos5YFQKig" incoming="_IZqGq6ItEeOynos5YFQKig" type="_6UAlEKItEeOynos5YFQKig"/>
+        <result xmi:id="_IZqGxaItEeOynos5YFQKig" name="" inPartition="_IZqGqKItEeOynos5YFQKig" outgoing="_IZqGr6ItEeOynos5YFQKig" type="_6T_-AKItEeOynos5YFQKig"/>
+      </node>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_IZqGxqItEeOynos5YFQKig" name="java.lang.String"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_IZqGx6ItEeOynos5YFQKig" name="no.ntnu.erikthh.studass.taxicentral.routeplanner.Journey"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_IZqGyKItEeOynos5YFQKig" name="com.bitreactive.library.http">
+      <packagedElement xmi:type="uml:Activity" xmi:id="_3eyDYSAhEeGi8L4nucummA" name="HTTP Get" classifierBehavior="_IZqGyqItEeOynos5YFQKig" group="_IZqG2qItEeOynos5YFQKig" partition="_IZqG2qItEeOynos5YFQKig" node="_IZqtoKItEeOynos5YFQKig _IZqtoaItEeOynos5YFQKig _IZqtoqItEeOynos5YFQKig _IZqto6ItEeOynos5YFQKig">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_IZqGyqItEeOynos5YFQKig" name="HTTP Get">
+          <region xmi:id="_IZqGy6ItEeOynos5YFQKig" name="&lt;region>">
+            <transition xmi:id="_IZqGzKItEeOynos5YFQKig" name="get / " source="_IZqG0KItEeOynos5YFQKig" target="_IZqG0aItEeOynos5YFQKig"/>
+            <transition xmi:id="_IZqGzaItEeOynos5YFQKig" name=" / localError" source="_IZqG0aItEeOynos5YFQKig" target="_IZqG0qItEeOynos5YFQKig"/>
+            <transition xmi:id="_IZqGzqItEeOynos5YFQKig" name=" / remoteError" source="_IZqG0aItEeOynos5YFQKig" target="_IZqG0qItEeOynos5YFQKig"/>
+            <transition xmi:id="_IZqGz6ItEeOynos5YFQKig" name=" / response" source="_IZqG0aItEeOynos5YFQKig" target="_IZqG0qItEeOynos5YFQKig"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_IZqG0KItEeOynos5YFQKig" name="&lt;initial>"/>
+            <subvertex xmi:type="uml:State" xmi:id="_IZqG0aItEeOynos5YFQKig" name="active"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_IZqG0qItEeOynos5YFQKig" name="&lt;final>"/>
+          </region>
+        </ownedBehavior>
+        <ownedParameter xmi:id="_IatPcKItEeOynos5YFQKig" name="get" type="_IZqGxqItEeOynos5YFQKig"/>
+        <ownedParameter xmi:id="_Iat2gKItEeOynos5YFQKig" name="localError" direction="out" parameterSet="_IZqG16ItEeOynos5YFQKig"/>
+        <ownedParameter xmi:id="_IaudkKItEeOynos5YFQKig" name="remoteError" type="_IZqGxqItEeOynos5YFQKig" direction="out" parameterSet="_IZqG2KItEeOynos5YFQKig"/>
+        <ownedParameter xmi:id="_IaudkaItEeOynos5YFQKig" name="response" type="_IZqGxqItEeOynos5YFQKig" direction="out" parameterSet="_IZqG2aItEeOynos5YFQKig"/>
+        <ownedParameterSet xmi:id="_IZqG16ItEeOynos5YFQKig" name="localError" parameter="_Iat2gKItEeOynos5YFQKig"/>
+        <ownedParameterSet xmi:id="_IZqG2KItEeOynos5YFQKig" name="remoteError" parameter="_IaudkKItEeOynos5YFQKig"/>
+        <ownedParameterSet xmi:id="_IZqG2aItEeOynos5YFQKig" name="response" parameter="_IaudkaItEeOynos5YFQKig"/>
+        <group xmi:type="uml:ActivityPartition" xmi:id="_IZqG2qItEeOynos5YFQKig" name="main" node="_IZqtoKItEeOynos5YFQKig _IZqtoaItEeOynos5YFQKig _IZqtoqItEeOynos5YFQKig _IZqto6ItEeOynos5YFQKig"/>
+        <node xmi:type="uml:ActivityParameterNode" xmi:id="_IZqtoKItEeOynos5YFQKig" name="get" inPartition="_IZqG2qItEeOynos5YFQKig" type="_IZqGxqItEeOynos5YFQKig" parameter="_IatPcKItEeOynos5YFQKig"/>
+        <node xmi:type="uml:ActivityParameterNode" xmi:id="_IZqtoaItEeOynos5YFQKig" name="localError" inPartition="_IZqG2qItEeOynos5YFQKig" parameter="_Iat2gKItEeOynos5YFQKig"/>
+        <node xmi:type="uml:ActivityParameterNode" xmi:id="_IZqtoqItEeOynos5YFQKig" name="remoteError" inPartition="_IZqG2qItEeOynos5YFQKig" type="_IZqGxqItEeOynos5YFQKig" parameter="_IaudkKItEeOynos5YFQKig"/>
+        <node xmi:type="uml:ActivityParameterNode" xmi:id="_IZqto6ItEeOynos5YFQKig" name="response" inPartition="_IZqG2qItEeOynos5YFQKig" type="_IZqGxqItEeOynos5YFQKig" parameter="_IaudkaItEeOynos5YFQKig"/>
+      </packagedElement>
+      <profileApplication xmi:id="_IZqtpKItEeOynos5YFQKig">
+        <eAnnotations xmi:id="_IZqtpaItEeOynos5YFQKig" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="pathmap://ARCTIS_PROFILES/arctis.profile.uml#_WFTqUXjGEdyxtoUMycQn9Q"/>
+        </eAnnotations>
+        <appliedProfile href="pathmap://ARCTIS_PROFILES/arctis.profile.uml#_rE77YK4iEduZSuTiwKs5Lw"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_IZqtpqItEeOynos5YFQKig" name="java.lang.Object"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_IZqtp6ItEeOynos5YFQKig" name="T"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_IZqtqKItEeOynos5YFQKig" name="no.ntnu.erikthh.studass.taxicentral.routeplanner.Route"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_IZqtqaItEeOynos5YFQKig" name="com.bitreactive.library.gson">
+      <packagedElement xmi:type="uml:Activity" xmi:id="_eOnYsVtTEeGtaPY7WHS-jQ" name="Json Deserializer" classifierBehavior="_IZqtq6ItEeOynos5YFQKig" group="_IZqtuaItEeOynos5YFQKig" partition="_IZqtuaItEeOynos5YFQKig" node="_IZqtuqItEeOynos5YFQKig _IZqtu6ItEeOynos5YFQKig _IZqtvKItEeOynos5YFQKig">
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_IZqtq6ItEeOynos5YFQKig" name="Json Deserializer">
+          <region xmi:id="_IZqtrKItEeOynos5YFQKig" name="&lt;region>">
+            <transition xmi:id="_IZqtraItEeOynos5YFQKig" name="json / ok" source="_IZqtr6ItEeOynos5YFQKig" target="_IZqtsKItEeOynos5YFQKig"/>
+            <transition xmi:id="_IZqtrqItEeOynos5YFQKig" name="json / error" source="_IZqtr6ItEeOynos5YFQKig" target="_IZqtsKItEeOynos5YFQKig"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_IZqtr6ItEeOynos5YFQKig" name="&lt;initial>"/>
+            <subvertex xmi:type="uml:FinalState" xmi:id="_IZqtsKItEeOynos5YFQKig" name="&lt;final>"/>
+          </region>
+        </ownedBehavior>
+        <ownedParameter xmi:id="_IZqttKItEeOynos5YFQKig" name="targetClass" type="_IZqGxqItEeOynos5YFQKig">
+          <ownedComment xmi:id="_IZqttaItEeOynos5YFQKig">
+            <body>The full qualified name of the class that the Json string will be deserialized into</body>
+          </ownedComment>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_IZqttqItEeOynos5YFQKig" name="targetClass" type="_IZqGxqItEeOynos5YFQKig" value="java.lang.Object"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_IbOM0KItEeOynos5YFQKig" name="json" type="_IZqGxqItEeOynos5YFQKig"/>
+        <ownedParameter xmi:id="_IbOz4KItEeOynos5YFQKig" name="ok" type="_IZqtp6ItEeOynos5YFQKig" direction="out" parameterSet="_IZqtt6ItEeOynos5YFQKig"/>
+        <ownedParameter xmi:id="_IbOz4aItEeOynos5YFQKig" name="error" type="_IZqGxqItEeOynos5YFQKig" direction="out" parameterSet="_IZqtuKItEeOynos5YFQKig"/>
+        <ownedParameterSet xmi:id="_IZqtt6ItEeOynos5YFQKig" name="ok" parameter="_IbOz4KItEeOynos5YFQKig"/>
+        <ownedParameterSet xmi:id="_IZqtuKItEeOynos5YFQKig" name="error" parameter="_IbOz4aItEeOynos5YFQKig"/>
+        <group xmi:type="uml:ActivityPartition" xmi:id="_IZqtuaItEeOynos5YFQKig" name="main" node="_IZqtuqItEeOynos5YFQKig _IZqtu6ItEeOynos5YFQKig _IZqtvKItEeOynos5YFQKig"/>
+        <node xmi:type="uml:ActivityParameterNode" xmi:id="_IZqtuqItEeOynos5YFQKig" name="json" inPartition="_IZqtuaItEeOynos5YFQKig" type="_IZqGxqItEeOynos5YFQKig" parameter="_IbOM0KItEeOynos5YFQKig"/>
+        <node xmi:type="uml:ActivityParameterNode" xmi:id="_IZqtu6ItEeOynos5YFQKig" name="ok" inPartition="_IZqtuaItEeOynos5YFQKig" type="_IZqtp6ItEeOynos5YFQKig" parameter="_IbOz4KItEeOynos5YFQKig"/>
+        <node xmi:type="uml:ActivityParameterNode" xmi:id="_IZqtvKItEeOynos5YFQKig" name="error" inPartition="_IZqtuaItEeOynos5YFQKig" type="_IZqGxqItEeOynos5YFQKig" parameter="_IbOz4aItEeOynos5YFQKig"/>
+      </packagedElement>
+      <profileApplication xmi:id="_IZqtvaItEeOynos5YFQKig">
+        <eAnnotations xmi:id="_IZqtvqItEeOynos5YFQKig" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="pathmap://ARCTIS_PROFILES/arctis.profile.uml#_WFTqUXjGEdyxtoUMycQn9Q"/>
+        </eAnnotations>
+        <appliedProfile href="pathmap://ARCTIS_PROFILES/arctis.profile.uml#_rE77YK4iEduZSuTiwKs5Lw"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_IZqtv6ItEeOynos5YFQKig" name="Route"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_IZqtwKItEeOynos5YFQKig" name="no.ntnu.erikthh.studass.taxicentral.routeplanner.Direction"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_6T_W8KItEeOynos5YFQKig" name="no.ntnu.item.ttm4115.semesterassignment.routeplanner.Journey"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_6T_-AKItEeOynos5YFQKig" name="no.ntnu.item.ttm4115.semesterassignment.routeplanner.Route"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_6UAlEKItEeOynos5YFQKig" name="no.ntnu.item.ttm4115.semesterassignment.routeplanner.Direction"/>
+    <profileApplication xmi:id="_IZqtwaItEeOynos5YFQKig">
+      <eAnnotations xmi:id="_IZqtwqItEeOynos5YFQKig" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://ARCTIS_PROFILES/arctis.profile.uml#_WFTqUXjGEdyxtoUMycQn9Q"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://ARCTIS_PROFILES/arctis.profile.uml#_rE77YK4iEduZSuTiwKs5Lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_IZqtw6ItEeOynos5YFQKig">
+      <eAnnotations xmi:id="_IZqtxKItEeOynos5YFQKig" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://RAMSES_GRAPHIC_PROFILES/no.ntnu.item.ramses.graphicprofile.uml#_geG1wIuAEdytfOWtpACIqw"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://RAMSES_GRAPHIC_PROFILES/no.ntnu.item.ramses.graphicprofile.uml#_UEANMUVlEduH9aQE_pc66w"/>
+    </profileApplication>
+  </uml:Package>
+  <graphics:Shape xmi:id="_IZqtxaItEeOynos5YFQKig" x="180" y="55" width="613" height="54" base_Element="_IZqGkaItEeOynos5YFQKig"/>
+  <graphics:Shape xmi:id="_IZqtxqItEeOynos5YFQKig" x="180" y="108" width="613" height="199" base_Element="_IZqGqKItEeOynos5YFQKig"/>
+  <arctis:esm xmi:id="_IZqtx6ItEeOynos5YFQKig" base_StateMachine="_IZqGkqItEeOynos5YFQKig"/>
+  <graphics:Shape xmi:id="_IZqtyKItEeOynos5YFQKig" x="198" y="126" width="127" height="55" base_Element="_IZqGsKItEeOynos5YFQKig" orientation="east"/>
+  <graphics:Shape xmi:id="_IZqtyaItEeOynos5YFQKig" x="72" y="144" base_Element="_IZqGs6ItEeOynos5YFQKig" orientation="west"/>
+  <graphics:Shape xmi:id="_IZqtyqItEeOynos5YFQKig" x="18" y="18" base_Element="_IZqGtqItEeOynos5YFQKig" orientation="south"/>
+  <graphics:Shape xmi:id="_IZqty6ItEeOynos5YFQKig" x="90" y="90" base_Element="_IZqGt6ItEeOynos5YFQKig" orientation="south"/>
+  <graphics:Shape xmi:id="_IZqtzKItEeOynos5YFQKig" x="127" y="23" base_Element="_IZqGuKItEeOynos5YFQKig" orientation="east"/>
+  <graphics:Shape xmi:id="_IZqtzaItEeOynos5YFQKig" x="18" y="18" base_Element="_IZqGtaItEeOynos5YFQKig" orientation="west"/>
+  <graphics:Shape xmi:id="_IZqtzqItEeOynos5YFQKig" x="324" y="108" width="253" height="108" base_Element="_IZqGtKItEeOynos5YFQKig"/>
+  <arctis:esm xmi:id="_IZqtz6ItEeOynos5YFQKig" base_StateMachine="_IZqGyqItEeOynos5YFQKig"/>
+  <arctis:event xmi:id="_IZqt0KItEeOynos5YFQKig" base_Transition="_IZqGzKItEeOynos5YFQKig" triggers="_IZqtoKItEeOynos5YFQKig"/>
+  <arctis:event xmi:id="_IZqt0aItEeOynos5YFQKig" base_Transition="_IZqGzaItEeOynos5YFQKig" effects="_IZqtoaItEeOynos5YFQKig"/>
+  <arctis:event xmi:id="_IZqt0qItEeOynos5YFQKig" base_Transition="_IZqGzqItEeOynos5YFQKig" effects="_IZqtoqItEeOynos5YFQKig"/>
+  <arctis:event xmi:id="_IZqt06ItEeOynos5YFQKig" base_Transition="_IZqGz6ItEeOynos5YFQKig" effects="_IZqto6ItEeOynos5YFQKig"/>
+  <graphics:Shape xmi:id="_IZqt1KItEeOynos5YFQKig" x="18" y="18" base_Element="_IZqGvqItEeOynos5YFQKig" orientation="south"/>
+  <graphics:Shape xmi:id="_IZqt1aItEeOynos5YFQKig" x="90" y="90" base_Element="_IZqGv6ItEeOynos5YFQKig" orientation="south"/>
+  <graphics:Shape xmi:id="_IZqt1qItEeOynos5YFQKig" x="90" y="18" base_Element="_IZqGu6ItEeOynos5YFQKig" orientation="west"/>
+  <graphics:Shape xmi:id="_IZqt16ItEeOynos5YFQKig" x="576" y="108" width="216" height="108" base_Element="_IZqGuaItEeOynos5YFQKig"/>
+  <arctis:esm xmi:id="_IZqt2KItEeOynos5YFQKig" base_StateMachine="_IZqtq6ItEeOynos5YFQKig"/>
+  <arctis:event xmi:id="_IZqt2aItEeOynos5YFQKig" base_Transition="_IZqtraItEeOynos5YFQKig" triggers="_IZqtuqItEeOynos5YFQKig" effects="_IZqtu6ItEeOynos5YFQKig"/>
+  <arctis:event xmi:id="_IZqt2qItEeOynos5YFQKig" base_Transition="_IZqtrqItEeOynos5YFQKig" triggers="_IZqtuqItEeOynos5YFQKig" effects="_IZqtvKItEeOynos5YFQKig"/>
+  <graphics:Shape xmi:id="_IZqt26ItEeOynos5YFQKig" x="612" y="306" base_Element="_IZqGwKItEeOynos5YFQKig"/>
+  <graphics:Shape xmi:id="_IZqt3KItEeOynos5YFQKig" x="432" y="306" base_Element="_IZqGwaItEeOynos5YFQKig" orientation="south"/>
+  <graphics:Shape xmi:id="_IZqt3aItEeOynos5YFQKig" x="360" y="306" base_Element="_IZqGwqItEeOynos5YFQKig"/>
+  <graphics:Shape xmi:id="_IZqt3qItEeOynos5YFQKig" x="576" y="234" width="88" height="55" base_Element="_IZqGw6ItEeOynos5YFQKig"/>
+  <arctis:event xmi:id="_IZqt36ItEeOynos5YFQKig" base_Transition="_IZqGlKItEeOynos5YFQKig" triggers="_IZqGs6ItEeOynos5YFQKig"/>
+  <arctis:event xmi:id="_IZqt4KItEeOynos5YFQKig" base_Transition="_IZqGlaItEeOynos5YFQKig" effects="_IZqGwKItEeOynos5YFQKig"/>
+  <arctis:event xmi:id="_IZqt4aItEeOynos5YFQKig" base_Transition="_IZqGlqItEeOynos5YFQKig" effects="_IZqGwaItEeOynos5YFQKig"/>
+  <arctis:event xmi:id="_IZqt4qItEeOynos5YFQKig" base_Transition="_IZqGl6ItEeOynos5YFQKig" effects="_IZqGwqItEeOynos5YFQKig"/>
+</xmi:XMI>
