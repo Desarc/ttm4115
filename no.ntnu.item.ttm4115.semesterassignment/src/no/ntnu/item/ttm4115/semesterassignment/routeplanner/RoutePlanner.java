@@ -11,11 +11,19 @@ public class RoutePlanner extends Block {
 
 	public String createURI(Journey journey) {
 		this.setTaxiId(journey.getTaxiId());
-		return "http://maps.googleapis.com/maps/api/directions/json?origin="+journey.getFromAddress()+"&destination="+journey.getToAddress()+"&sensor=true";
+		String fromAddress = journey.getFromAddress().replace(" ", "%20");
+		String toAddress = journey.getToAddress().replace(" ", "%20");
+		return "http://maps.googleapis.com/maps/api/directions/json?origin="+fromAddress+"&destination="+toAddress+"&sensor=true";
 	}
 
 	public Route getRoute(Direction dir) {
-		Route route = dir.routes.get(0);
+		Route route;
+		if (dir.routes.size() > 0) {
+			route = dir.routes.get(0);
+		}
+		else {
+			route = new Route();
+		}
 		route.taxiId = this.getTaxiId();
 		return route;
 	}

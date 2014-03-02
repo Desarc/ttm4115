@@ -19,6 +19,7 @@ public class MotionSimulator extends Block {
 		System.out.println("Creating MapUpdate for taxi: "+route.taxiId);
 		if(stepCount >= route.legs.get(legCount).steps.size()){
 			legCount++;
+			return null;
 		}
 		Leg leg = route.legs.get(legCount);
 		Step step = leg.steps.get(stepCount);
@@ -30,9 +31,12 @@ public class MotionSimulator extends Block {
 	}
 
 	public int getDelay() {
+		if(stepCount >= route.legs.get(legCount).steps.size()){
+			return 0;
+		}
 		int delay = route.legs.get(legCount).steps.get(stepCount).duration.value;
 		System.out.println("Delaying for "+ Integer.toString(delay)+" seconds");
-		return delay*100;
+		return delay*10;
 	}
 
 	public void setCount() {
