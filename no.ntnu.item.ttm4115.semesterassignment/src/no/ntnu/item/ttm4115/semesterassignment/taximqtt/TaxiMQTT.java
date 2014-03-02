@@ -25,9 +25,19 @@ public class TaxiMQTT extends Block {
 		baseTopic = "generic-map-ui-"+groupId;
 		String clientID = UUID.randomUUID().toString().substring(0, 20);
 		MQTTConfigParam param = new MQTTConfigParam("broker.mqttdashboard.com", 1883, clientID);
-		ArrayList<String> topicList = getTopics(topics);
-		for (String topic : topicList) {
-			param.addSubscribeTopic(baseTopic+"/"+topic);			
+		if (topics == null || topics.isEmpty()) {
+			param.addSubscribeTopic(baseTopic);
+		}
+		else {
+			ArrayList<String> topicList = getTopics(topics);
+			for (String topic : topicList) {
+				if (topic.equals("")) {
+					param.addSubscribeTopic(baseTopic);
+				}
+				else {
+					param.addSubscribeTopic(baseTopic+"/"+topic);			
+				}
+			}
 		}
 		param.setDefaultPublishTopic(baseTopic);
 		return param;
