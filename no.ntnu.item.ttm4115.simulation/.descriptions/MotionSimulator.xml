@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<block
+    name="Motion Simulator" 
+    author="Student assistants" 
+    provider="NTNU - Department of Telematics" 
+    purpose="Simulation of movement with the Android Map application." 
+    uuid="_IqxXsaPNEeOl8vvkd4XquA" 
+    status="published" 
+    type="block" 
+    >
+    <required>
+        <package name="com.bitreactive.library.android.maps.model"/>
+        <package name="no.ntnu.item.ttm4115.simulation.motionsimulator"/>
+        <package name="no.ntnu.item.ttm4115.simulation.routeplanner"/>
+    </required>
+<description><![CDATA[The Motion Simulator takes a Route object with an ID, a start address and a destination address, generated with the help of the Google Maps API. It then creates periodic MapUpdate objects can be sent to the Android Map application, which will create markers on the map, or update the position of current markers (identified by ID). The updates will simulate moving from the start address to the destination address.]]></description></block>

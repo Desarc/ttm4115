@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<block
+    name="Route Planner" 
+    author="Student assistants" 
+    provider="NTNU - Department of Telematics" 
+    purpose="Creating a traveling route from a start address to a destination address, with the help of the Google Maps API." 
+    uuid="_UoBM0aPNEeOl8vvkd4XquA" 
+    status="published" 
+    type="block" 
+    >
+    <required>
+        <package name="no.ntnu.item.ttm4115.simulation.routeplanner"/>
+        <block name="c0" uuid="_3eyDYSAhEeGi8L4nucummA"/>
+        <block name="c1" uuid="_eOnYsVtTEeGtaPY7WHS-jQ"/>
+    </required>
+<description><![CDATA[Takes a Journey object with an ID, a start address and a destination address, and queries the Google Maps API for directions. If successful, the block releases a Route object with all the steps required to travel from start to destination.]]></description></block>

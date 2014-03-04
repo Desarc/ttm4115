@@ -1,7 +1,7 @@
 package no.ntnu.item.semesterassignment.taxisimulator;
 
 import no.ntnu.item.arctis.runtime.Block;
-import no.ntnu.item.ttm4115.termassignment.routeplanner.Journey;
+import no.ntnu.item.ttm4115.simulation.routeplanner.Journey;
 
 import com.bitreactive.library.android.maps.model.MapUpdate;
 
