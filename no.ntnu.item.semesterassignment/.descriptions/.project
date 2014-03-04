@@ -12,7 +12,9 @@
         <dependency name="no.ntnu.item.ttm4115.gui" uuid="_9DmKkJS1EeOzs7hpNEuEjQ" version="1.0.0"/>
         <dependency name="no.ntnu.item.ttm4115.library.motionsimulator" uuid="_zyD0kKKQEeKC2Y_rDtDvdQ" version="1.2.0"/>
         <dependency name="no.ntnu.item.ttm4115.library.routeplanner" uuid="_oo35oKKQEeKC2Y_rDtDvdQ" version="1.1.0"/>
-        <dependency name="no.ntnu.item.ttm4115.semesterassignment" uuid="_Qf5JQJjqEeO5horfgX95HA" version="1.0.0"/>
         <dependency name="no.ntnu.item.ttm4115.semesterassignment" uuid="_Jh2cgJ-iEeOvFPDYc7cgGg" version="1.0.0"/>
+        <dependency name="no.ntnu.item.ttm4115.semesterassignment" uuid="_Qf5JQJjqEeO5horfgX95HA" version="1.0.0"/>
+        <dependency name="no.ntnu.item.ttm4115.termassignment" uuid="_NuSVsKOdEeOlvM2Rtrpuog" version="1.0.0"/>
+        <dependency name="no.ntnu.item.ttm4115.termassignment" uuid="_K7p9UJNHEeOhlfVj5NGtGA" version="1.0.0"/>
     </dependencies>
 </project>
