@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<block
+    name="Motion Simulator" 
+    uuid="_Umh_4aOdEeOlvM2Rtrpuog" 
+    status="published" 
+    type="block" 
+    >
+    <required>
+        <package name="com.bitreactive.library.android.maps.model"/>
+        <package name="no.ntnu.item.ttm4115.termassignment.motionsimulator"/>
+        <package name="no.ntnu.item.ttm4115.termassignment.routeplanner"/>
+    </required>
+</block>

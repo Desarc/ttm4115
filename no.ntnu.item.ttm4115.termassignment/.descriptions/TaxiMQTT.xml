@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<block
+    name="TaxiMQTT" 
+    uuid="_wvEX4aOdEeOlvM2Rtrpuog" 
+    status="published" 
+    type="block" 
+    >
+    <required>
+        <package name="com.bitreactive.library.mqtt"/>
+        <package name="com.bitreactive.library.mqtt.mqtt.MQTT"/>
+        <package name="no.ntnu.item.ttm4115.termassignment.taximqtt"/>
+        <block name="c0" uuid="_AB69sObWEeG9SpMqxrlJPg"/>
+    </required>
+</block>
