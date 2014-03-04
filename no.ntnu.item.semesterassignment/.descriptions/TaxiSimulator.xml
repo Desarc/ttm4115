@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <block
     name="TaxiSimulator" 
-    uuid="_yd708J0wEeOspvMODXrgoQ" 
+    uuid="_wL38gKOjEeO_1qExVHf2BQ" 
     status="under construction" 
-    session="multi_session" 
     type="block" 
     >
     <required>
