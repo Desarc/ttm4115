@@ -7,4 +7,8 @@ public class TaxiMQTT extends Block {
 	public void deserializeError(String error) {
 		System.out.println("Deserialize error in TaxiMQTT: "+error);
 	}
+
+	public void incomingTopic(String topic) {
+		System.out.println(topic);
+	}
 }
