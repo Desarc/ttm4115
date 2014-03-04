@@ -32,10 +32,6 @@ public class Taxi extends Block {
 	public void publishError(String error) {
 		System.out.println("Publish error: "+error);
 	}
-	
-	public String getMapTopic() {
-		return TaxiMessage.MAP;
-	}
 
 	public TaxiPosition createPositionUpdate(TaxiMessage message) {
 		return new TaxiPosition(message.getFrom(), message.getData2());
