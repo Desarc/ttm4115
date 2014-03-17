@@ -34,7 +34,7 @@ public class Taxi extends Block {
 	}
 
 	public TaxiPosition createPositionUpdate(TaxiMessage message) {
-		return new TaxiPosition(message.getFrom(), message.getData2());
+		return new TaxiPosition(message.getFrom(), message.getData1());
 	}
 	
 	public MapUpdate updateMap(TaxiPosition position) {
