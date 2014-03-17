@@ -144,6 +144,9 @@
         <argument xmi:id="_z3WTQKOkEeO_1qExVHf2BQ" name="subscribe" inPartition="_fmC84JS0EeOzs7hpNEuEjQ" incoming="_hpdKAKOlEeO_1qExVHf2BQ"/>
         <argument xmi:id="_z3XhYKOkEeO_1qExVHf2BQ" name="publish" inPartition="_fmC84JS0EeOzs7hpNEuEjQ" incoming="_egX_wKPSEeOl8vvkd4XquA" type="_iJAesqOjEeO_1qExVHf2BQ"/>
         <argument xmi:id="_z3bLwKOkEeO_1qExVHf2BQ" name="disconnect" inPartition="_fmC84JS0EeOzs7hpNEuEjQ" incoming="_Cb9RkKO4EeONXJZ82cYyIg"/>
+        <argument xmi:type="uml:ValuePin" xmi:id="_k9VrQK3aEeOkco5TgCfD-g" name="group" type="_NEgBUZWFEeOAvbU2bIO-iA">
+          <value xmi:type="uml:LiteralInteger" xmi:id="_k9W5YK3aEeOkco5TgCfD-g" name="group" type="_NEgBUZWFEeOAvbU2bIO-iA" value="50"/>
+        </argument>
         <result xmi:id="_z3ZWkKOkEeO_1qExVHf2BQ" name="message" inPartition="_fmC84JS0EeOzs7hpNEuEjQ" type="_iJAesqOjEeO_1qExVHf2BQ"/>
         <result xmi:id="_z3aksKOkEeO_1qExVHf2BQ" name="disconnected" inPartition="_fmC84JS0EeOzs7hpNEuEjQ"/>
         <result xmi:id="_z3ePEKOkEeO_1qExVHf2BQ" name="publishedOk" inPartition="_fmC84JS0EeOzs7hpNEuEjQ"/>
