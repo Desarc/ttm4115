@@ -52,4 +52,10 @@ public class Taxi extends Block {
 		return new Position(Double.parseDouble(position.substring(0, commaIndex))*1E6, Double.parseDouble(position.substring(commaIndex+1))*1E6);
 	}
 
+	public MapUpdate readUpdate(MapUpdate update) {
+		System.out.println(update.getMarkers().get(0).getId());
+		System.out.println(update.getMarkers().get(0).getPosition().getLatitude()+","+update.getMarkers().get(0).getPosition().getLatitude());
+		return update;
+	}
+
 }
