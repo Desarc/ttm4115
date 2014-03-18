@@ -54,7 +54,7 @@ public class Taxi extends Block {
 
 	public MapUpdate readUpdate(MapUpdate update) {
 		System.out.println(update.getMarkers().get(0).getId());
-		System.out.println(update.getMarkers().get(0).getPosition().getLatitude()+","+update.getMarkers().get(0).getPosition().getLatitude());
+		System.out.println(update.getMarkers().get(0).getPosition().getLatitude()+","+update.getMarkers().get(0).getPosition().getLongitude());
 		return update;
 	}
 
