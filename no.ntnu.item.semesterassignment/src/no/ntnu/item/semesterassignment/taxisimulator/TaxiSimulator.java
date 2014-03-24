@@ -2,7 +2,6 @@ package no.ntnu.item.semesterassignment.taxisimulator;
 
 import no.ntnu.item.arctis.runtime.Block;
 import no.ntnu.item.ttm4115.simulation.routeplanner.Journey;
-import no.ntnu.item.ttm4115.simulation.routeplanner.Leg;
 import no.ntnu.item.ttm4115.simulation.routeplanner.Route;
 
 import com.bitreactive.library.android.maps.model.MapUpdate;
@@ -48,9 +47,12 @@ public class TaxiSimulator extends Block {
 	}
 
 	public Route readRoute(Route route) {
-		for (Leg leg : route.legs) {
-			System.out.println(leg.start_address+" => "+leg.end_address);
-		}
+//		for (Leg leg : route.legs) {
+//			System.out.println(leg.start_address+" => "+leg.end_address);
+//			for (Step step : leg.steps) {
+//				System.out.println(step.start_location.lat+","+step.start_location.lng+" => "+step.end_location.lat+","+step.end_location.lng);
+//			}
+//		}
 		return route;
 	}
 

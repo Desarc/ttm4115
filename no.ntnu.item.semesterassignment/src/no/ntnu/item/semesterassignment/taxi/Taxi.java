@@ -36,6 +36,10 @@ public class Taxi extends Block {
 	public TaxiPosition createPositionUpdate(TaxiMessage message) {
 		return new TaxiPosition(message.getFrom(), message.getData1());
 	}
+
+	public TaxiPosition getPositionUpdate(TaxiMessage message) {
+		return new TaxiPosition(message.getFrom(), message.getData2());
+	}
 	
 	public MapUpdate updateMap(TaxiPosition position) {
 		System.out.println("Putting "+position.getTaxiId()+" on the map with position "+position.getPosition());
@@ -53,8 +57,8 @@ public class Taxi extends Block {
 	}
 
 	public MapUpdate readUpdate(MapUpdate update) {
-		System.out.println(update.getMarkers().get(0).getId());
-		System.out.println(update.getMarkers().get(0).getPosition().getLatitude()+","+update.getMarkers().get(0).getPosition().getLongitude());
+		//System.out.println(update.getMarkers().get(0).getId());
+		//System.out.println(update.getMarkers().get(0).getPosition().getLatitude()+","+update.getMarkers().get(0).getPosition().getLongitude());
 		return update;
 	}
 

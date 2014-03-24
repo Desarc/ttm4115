@@ -37,6 +37,7 @@
       <ownedOperation xmi:id="_v8aSQKOlEeO_1qExVHf2BQ" name="updateMap"/>
       <ownedOperation xmi:id="_3R2OwKOlEeO_1qExVHf2BQ" name="getMapTopic"/>
       <ownedOperation xmi:id="_YgquMK3lEeORb6NISn27cQ" name="readUpdate"/>
+      <ownedOperation xmi:id="_WNfEALNeEeOrltol74Qgxg" name="getPositionUpdate"/>
       <ownedParameter xmi:id="_UdvP0JVxEeOAvbU2bIO-iA" name="init" type="_R17gEJVxEeOAvbU2bIO-iA"/>
       <edge xmi:type="uml:ObjectFlow" xmi:id="_tKAf0JVyEeOAvbU2bIO-iA" name="e0" inPartition="_fmC84JS0EeOzs7hpNEuEjQ" source="_UdqXUJVxEeOAvbU2bIO-iA" target="_sBq-wJVyEeOAvbU2bIO-iA"/>
       <edge xmi:type="uml:ObjectFlow" xmi:id="_HqasUJWHEeOAvbU2bIO-iA" name="e9" inPartition="_fmC84JS0EeOzs7hpNEuEjQ" source="_sBq-wJVyEeOAvbU2bIO-iA" target="_FruyEJWHEeOAvbU2bIO-iA"/>
@@ -162,7 +163,7 @@
         <argument xmi:id="_CoOtoKOlEeO_1qExVHf2BQ" name="message" inPartition="_fmC84JS0EeOzs7hpNEuEjQ" incoming="_ESxHYKOmEeO_1qExVHf2BQ" type="_jjym8JWHEeOAvbU2bIO-iA"/>
         <result xmi:id="_CoNfgKOlEeO_1qExVHf2BQ" name="" inPartition="_fmC84JS0EeOzs7hpNEuEjQ" outgoing="_IzA04KOlEeO_1qExVHf2BQ" type="_iI_QkKOjEeO_1qExVHf2BQ"/>
       </node>
-      <node xmi:type="uml:CallOperationAction" xmi:id="_FK9wIKOlEeO_1qExVHf2BQ" name="o5" inPartition="_fmC84JS0EeOzs7hpNEuEjQ" operation="_9y2TEKOkEeO_1qExVHf2BQ">
+      <node xmi:type="uml:CallOperationAction" xmi:id="_FK9wIKOlEeO_1qExVHf2BQ" name="o5" inPartition="_fmC84JS0EeOzs7hpNEuEjQ" operation="_WNfEALNeEeOrltol74Qgxg">
         <argument xmi:id="_FLFE4KOlEeO_1qExVHf2BQ" name="message" inPartition="_fmC84JS0EeOzs7hpNEuEjQ" incoming="_IO8egKOlEeO_1qExVHf2BQ" type="_jjym8JWHEeOAvbU2bIO-iA"/>
         <result xmi:id="_FLD2wKOlEeO_1qExVHf2BQ" name="" inPartition="_fmC84JS0EeOzs7hpNEuEjQ" outgoing="_IZ5xUKOlEeO_1qExVHf2BQ" type="_iI_QkKOjEeO_1qExVHf2BQ"/>
       </node>
