@@ -16,7 +16,7 @@ public class MotionSimulator extends Block {
 	public int legCount;
 
 	public MapUpdate createMapUpdate() {
-		System.out.println("Creating MapUpdate for taxi: "+route.taxiId);
+		System.out.println("Creating MapUpdate for taxi: "+route.taxiAlias);
 		if(stepCount >= route.legs.get(legCount).steps.size()){
 			legCount++;
 			return null;
@@ -24,14 +24,14 @@ public class MotionSimulator extends Block {
 		Leg leg = route.legs.get(legCount);
 		Step step = leg.steps.get(stepCount);
 		MapUpdate mapUpdate = new MapUpdate();
-		Position position = new Position(step.end_location.lat*1E6, step.end_location.lng*1E6);
-		mapUpdate.addMarker(Marker.createMarker(route.taxiId).title(route.taxiId).description("Busy...").position(position));
+		Position position = new Position(step.endLocation.latitude*1E6, step.endLocation.longitude*1E6);
+		mapUpdate.addMarker(Marker.createMarker(route.taxiAlias).title(route.taxiAlias).description("Busy...").position(position));
 		return mapUpdate;
 	
 	}
 
 	public int getDelay() {
-		if(stepCount >= route.legs.get(legCount).steps.size()){
+		if(stepCount >= route.legs.get(legCount).steps.size()) {
 			return 0;
 		}
 		int delay = route.legs.get(legCount).steps.get(stepCount).duration.value;
@@ -49,7 +49,4 @@ public class MotionSimulator extends Block {
 		stepCount++;
 	}
 
-	public void end(MapUpdate update) {
-		return;
-	}
 }

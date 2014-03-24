@@ -1,5 +1,9 @@
 package no.ntnu.item.ttm4115.simulation.routeplanner;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.util.Collections;
+
 import no.ntnu.item.arctis.runtime.Block;
 import no.ntnu.item.ttm4115.simulation.routeplanner.Direction;
 import no.ntnu.item.ttm4115.simulation.routeplanner.Journey;
@@ -7,12 +11,22 @@ import no.ntnu.item.ttm4115.simulation.routeplanner.Route;
 
 public class RoutePlanner extends Block {
 
-	private String taxiId;
+	private static final String ENC = "UTF-8";
+	
+	private String taxiAlias;
 
+	@SuppressWarnings("deprecation")
 	public String createURI(Journey journey) {
-		this.setTaxiId(journey.getTaxiId());
-		String fromAddress = journey.getFromAddress().replace(" ", "%20");
-		String toAddress = journey.getToAddress().replace(" ", "%20");
+		this.taxiAlias = journey.taxiAlias;
+		String fromAddress, toAddress;
+		try {
+			fromAddress = URLEncoder.encode(journey.fromAddress, ENC);
+			toAddress = URLEncoder.encode(journey.toAddress, ENC);
+		} catch (UnsupportedEncodingException e) {
+			// Deprecated code
+			fromAddress = URLEncoder.encode(journey.fromAddress);
+			toAddress = URLEncoder.encode(journey.toAddress);
+		}
 		return "http://maps.googleapis.com/maps/api/directions/json?origin="+fromAddress+"&destination="+toAddress+"&sensor=true";
 	}
 
@@ -20,19 +34,11 @@ public class RoutePlanner extends Block {
 		Route route;
 		if (dir.routes.size() > 0) {
 			route = dir.routes.get(0);
+			route.taxiAlias = taxiAlias;
+		} else {
+			route = new Route(Collections.<Leg>emptyList(), taxiAlias);
 		}
-		else {
-			route = new Route();
-		}
-		route.taxiId = this.getTaxiId();
 		return route;
 	}
 
-	private String getTaxiId() {
-		return taxiId;
-	}
-
-	private void setTaxiId(String taxiId) {
-		this.taxiId = taxiId;
-	}
 }
