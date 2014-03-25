@@ -1,36 +1,24 @@
 package no.ntnu.item.ttm4115.simulation.routeplanner;
 
-public class Journey {
-	private String fromAddress;
-	private String toAddress;
-	private String taxiId;
-	
-	public Journey(String fromAddress,String toAddress,String taxiId){
-		this.setFromAddress(fromAddress);
-		this.setToAddress(toAddress);
-		this.setTaxiId(taxiId);
-		
-	}
+public final class Journey {
 
-	public String getFromAddress() {
-		return fromAddress;
-	}
-	public void setFromAddress(String fromAddress) {
+	public final String fromAddress;
+	public final String toAddress;
+
+	public String taxiAlias;
+
+	public Journey(String taxiAlias, String fromAddress, String toAddress) {
+		if (fromAddress == null)
+			throw new NullPointerException("fromAddress");
+		if (toAddress == null)
+			throw new NullPointerException("toAddress");
 		this.fromAddress = fromAddress;
-	}
-	public String getToAddress() {
-		return toAddress;
-	}
-	public void setToAddress(String toAddress) {
 		this.toAddress = toAddress;
+		this.taxiAlias = taxiAlias;
 	}
 
-	public String getTaxiId() {
-		return taxiId;
-	}
-
-	public void setTaxiId(String taxiId) {
-		this.taxiId = taxiId;
+	public Journey(String fromAddress, String toAddress) {
+		this(null, fromAddress, toAddress);
 	}
 
 }
