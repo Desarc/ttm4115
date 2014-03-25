@@ -74,8 +74,8 @@
       <node xmi:type="uml:DecisionNode" xmi:id="_IqxX5KPNEeOl8vvkd4XquA" name="d0" inPartition="_IqxXwqPNEeOl8vvkd4XquA" outgoing="_IqxXzaPNEeOl8vvkd4XquA _IqxXz6PNEeOl8vvkd4XquA" incoming="_IqxXyKPNEeOl8vvkd4XquA"/>
     </packagedElement>
     <packagedElement xmi:type="uml:TimeEvent" xmi:id="_IqxX56PNEeOl8vvkd4XquA" name="t0">
-      <when xmi:id="_BJmd8K3hEeOT467B0ja6Vw" name="t0">
-        <expr xmi:type="uml:LiteralString" xmi:id="_BJmd8a3hEeOT467B0ja6Vw" name="t0" value="0"/>
+      <when xmi:id="_FniTQLP_EeOJe-YPhZv6vw" name="t0">
+        <expr xmi:type="uml:LiteralString" xmi:id="_Fni6ULP_EeOJe-YPhZv6vw" name="t0" value="100"/>
       </when>
     </packagedElement>
     <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_IqxX6qPNEeOl8vvkd4XquA" name="int"/>
@@ -101,7 +101,7 @@
       <appliedProfile href="pathmap://RAMSES_GRAPHIC_PROFILES/no.ntnu.item.ramses.graphicprofile.uml#_UEANMUVlEduH9aQE_pc66w"/>
     </profileApplication>
   </uml:Package>
-  <graphics:Shape xmi:id="_Iqx-wKPNEeOl8vvkd4XquA" x="180" y="55" width="667" height="55" base_Element="_IqxXsaPNEeOl8vvkd4XquA"/>
+  <graphics:Shape xmi:id="_Iqx-wKPNEeOl8vvkd4XquA" x="180" y="54" width="667" height="55" base_Element="_IqxXsaPNEeOl8vvkd4XquA"/>
   <graphics:Shape xmi:id="_Iqx-waPNEeOl8vvkd4XquA" x="180" y="108" width="667" height="199" base_Element="_IqxXwqPNEeOl8vvkd4XquA"/>
   <arctis:esm xmi:id="_Iqx-wqPNEeOl8vvkd4XquA" base_StateMachine="_IqxXsqPNEeOl8vvkd4XquA"/>
   <graphics:Shape xmi:id="_Iqx-w6PNEeOl8vvkd4XquA" x="90" y="162" base_Element="_IqxX1aPNEeOl8vvkd4XquA" orientation="west"/>

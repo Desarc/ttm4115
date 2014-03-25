@@ -6,7 +6,7 @@ public class TaxiRequest implements QueueItem {
 	String toPosition;
 	String fromPosition;
 	
-	public TaxiRequest(String userId, String toPosition, String fromPosition) {
+	public TaxiRequest(String userId, String fromPosition, String toPosition) {
 		this.userId = userId;
 		this.toPosition = toPosition;
 		this.fromPosition = fromPosition;

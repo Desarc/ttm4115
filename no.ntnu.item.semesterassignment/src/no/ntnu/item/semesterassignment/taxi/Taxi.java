@@ -34,11 +34,12 @@ public class Taxi extends Block {
 	}
 
 	public TaxiPosition createPositionUpdate(TaxiMessage message) {
-		return new TaxiPosition(message.getFrom(), message.getData1());
+		return new TaxiPosition(message.getFrom(), message.getFromAddress());
 	}
 
 	public TaxiPosition getPositionUpdate(TaxiMessage message) {
-		return new TaxiPosition(message.getFrom(), message.getData2());
+		System.out.println(message.getToAddress());
+		return new TaxiPosition(message.getFrom(), message.getToAddress());
 	}
 	
 	public MapUpdate updateMap(TaxiPosition position) {

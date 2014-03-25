@@ -19,7 +19,7 @@ public class TaxiFleetSimulator extends Block {
 	}
 
 	public TaxiPosition createPosition() {
-		return new TaxiPosition(currentMessage.getData1(), currentMessage.getData2());
+		return new TaxiPosition(currentMessage.getClientId(), currentMessage.getFromAddress());
 	}
 
 	private Position convertPosition(String position) {

@@ -79,7 +79,7 @@ public class TaxiClient extends Block {
 			System.out.println("Request confirmed.");
 			state = DRIVING;
 		}
-		return new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.confirm, currentRequest.getId(), currentRequest.getToPosition(), currentRequest.getFromPosition());
+		return new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.confirm, currentRequest.getId(), currentRequest.getFromPosition(), currentRequest.getToPosition());
 	}
 	
 	public TaxiMessage generateDecline() {
@@ -87,7 +87,7 @@ public class TaxiClient extends Block {
 			System.out.println("Request declined, setting status to unavailable.");
 			state = ONLINE_UNAVAIL;
 		}
-		TaxiMessage message = new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.decline, currentRequest.getId(), currentRequest.getToPosition(), currentRequest.getFromPosition()); 
+		TaxiMessage message = new TaxiMessage(TaxiMessage.DISPATCHER, taxiId, TaxiMessage.decline, currentRequest.getId(), currentRequest.getFromPosition(), currentRequest.getToPosition()); 
 		currentRequest = null;
 		return message;
 	}
@@ -96,7 +96,7 @@ public class TaxiClient extends Block {
 		if (state.equals(ONLINE_AVAIL)) {
 			state = ORDER_WAITING;
 		}
-		currentRequest = new TaxiRequest(message.getData1(), message.getData2(), message.getData3());
+		currentRequest = new TaxiRequest(message.getClientId(), message.getFromAddress(), message.getToAddress());
 		return "Taxi requested from "+currentRequest.getFromPosition()+" to "+currentRequest.getToPosition()+". Accept?";
 	}
 

@@ -59,7 +59,7 @@
       <node xmi:type="uml:CallBehaviorAction" xmi:id="_duj9wKPREeOl8vvkd4XquA" name="c1" inPartition="_wL5KoKOjEeO_1qExVHf2BQ" behavior="_UoBM0aPNEeOl8vvkd4XquA">
         <argument xmi:id="_duvj8KPREeOl8vvkd4XquA" name="journey" inPartition="_wL5KoKOjEeO_1qExVHf2BQ" incoming="_qfsG4KPREeOl8vvkd4XquA" type="_dunoIaPREeOl8vvkd4XquA"/>
         <result xmi:id="_duwyEKPREeOl8vvkd4XquA" name="route" inPartition="_wL5KoKOjEeO_1qExVHf2BQ" outgoing="_qR3GQKPREeOl8vvkd4XquA" type="_cxkKAaPREeOl8vvkd4XquA"/>
-        <result xmi:id="_duynQKPREeOl8vvkd4XquA" name="remoteError" inPartition="_wL5KoKOjEeO_1qExVHf2BQ" outgoing="_hQkE4KPREeOl8vvkd4XquA"/>
+        <result xmi:id="_duynQKPREeOl8vvkd4XquA" name="remoteError" inPartition="_wL5KoKOjEeO_1qExVHf2BQ" outgoing="_hQkE4KPREeOl8vvkd4XquA" type="_L54UoKOkEeO_1qExVHf2BQ"/>
         <result xmi:id="_duz1YKPREeOl8vvkd4XquA" name="localError" inPartition="_wL5KoKOjEeO_1qExVHf2BQ" outgoing="_hYB-0KPREeOl8vvkd4XquA"/>
       </node>
       <node xmi:type="uml:CallBehaviorAction" xmi:id="_o0P4wKPREeOl8vvkd4XquA" name="c0" inPartition="_wL5KoKOjEeO_1qExVHf2BQ" behavior="_IqxXsaPNEeOl8vvkd4XquA">
@@ -91,15 +91,15 @@
             <subvertex xmi:type="uml:FinalState" xmi:id="_duqrcqPREeOl8vvkd4XquA" name="&lt;final>"/>
           </region>
         </ownedBehavior>
-        <ownedParameter xmi:id="_dunoI6PREeOl8vvkd4XquA" name="journey" type="_dunoIaPREeOl8vvkd4XquA"/>
-        <ownedParameter xmi:id="_duoPMaPREeOl8vvkd4XquA" name="route" type="_cxkKAaPREeOl8vvkd4XquA" direction="out"/>
-        <ownedParameter xmi:id="_duo2QaPREeOl8vvkd4XquA" name="remoteError" direction="out"/>
-        <ownedParameter xmi:id="_duo2Q6PREeOl8vvkd4XquA" name="localError" direction="out"/>
+        <ownedParameter xmi:id="_DBJO4LP2EeOJe-YPhZv6vw" name="journey" type="_dunoIaPREeOl8vvkd4XquA"/>
+        <ownedParameter xmi:id="_DBNgULP2EeOJe-YPhZv6vw" name="route" type="_cxkKAaPREeOl8vvkd4XquA" direction="out"/>
+        <ownedParameter xmi:id="_DBNgUbP2EeOJe-YPhZv6vw" name="remoteError" type="_L54UoKOkEeO_1qExVHf2BQ" direction="out"/>
+        <ownedParameter xmi:id="_DBOHYLP2EeOJe-YPhZv6vw" name="localError" direction="out"/>
         <group xmi:type="uml:ActivityPartition" xmi:id="_dunoIKPREeOl8vvkd4XquA" name="main" node="_dunoIqPREeOl8vvkd4XquA _duoPMKPREeOl8vvkd4XquA _duo2QKPREeOl8vvkd4XquA _duo2QqPREeOl8vvkd4XquA"/>
-        <node xmi:type="uml:ActivityParameterNode" xmi:id="_dunoIqPREeOl8vvkd4XquA" name="journey" inPartition="_dunoIKPREeOl8vvkd4XquA" type="_dunoIaPREeOl8vvkd4XquA" parameter="_dunoI6PREeOl8vvkd4XquA"/>
-        <node xmi:type="uml:ActivityParameterNode" xmi:id="_duoPMKPREeOl8vvkd4XquA" name="route" inPartition="_dunoIKPREeOl8vvkd4XquA" type="_cxkKAaPREeOl8vvkd4XquA" parameter="_duoPMaPREeOl8vvkd4XquA"/>
-        <node xmi:type="uml:ActivityParameterNode" xmi:id="_duo2QKPREeOl8vvkd4XquA" name="remoteError" inPartition="_dunoIKPREeOl8vvkd4XquA" parameter="_duo2QaPREeOl8vvkd4XquA"/>
-        <node xmi:type="uml:ActivityParameterNode" xmi:id="_duo2QqPREeOl8vvkd4XquA" name="localError" inPartition="_dunoIKPREeOl8vvkd4XquA" parameter="_duo2Q6PREeOl8vvkd4XquA"/>
+        <node xmi:type="uml:ActivityParameterNode" xmi:id="_dunoIqPREeOl8vvkd4XquA" name="journey" inPartition="_dunoIKPREeOl8vvkd4XquA" type="_dunoIaPREeOl8vvkd4XquA" parameter="_DBJO4LP2EeOJe-YPhZv6vw"/>
+        <node xmi:type="uml:ActivityParameterNode" xmi:id="_duoPMKPREeOl8vvkd4XquA" name="route" inPartition="_dunoIKPREeOl8vvkd4XquA" type="_cxkKAaPREeOl8vvkd4XquA" parameter="_DBNgULP2EeOJe-YPhZv6vw"/>
+        <node xmi:type="uml:ActivityParameterNode" xmi:id="_duo2QKPREeOl8vvkd4XquA" name="remoteError" inPartition="_dunoIKPREeOl8vvkd4XquA" type="_L54UoKOkEeO_1qExVHf2BQ" parameter="_DBNgUbP2EeOJe-YPhZv6vw"/>
+        <node xmi:type="uml:ActivityParameterNode" xmi:id="_duo2QqPREeOl8vvkd4XquA" name="localError" inPartition="_dunoIKPREeOl8vvkd4XquA" parameter="_DBOHYLP2EeOJe-YPhZv6vw"/>
       </packagedElement>
       <profileApplication xmi:id="_dupdUaPREeOl8vvkd4XquA">
         <eAnnotations xmi:id="_dupdUqPREeOl8vvkd4XquA" source="http://www.eclipse.org/uml2/2.0.0/UML">

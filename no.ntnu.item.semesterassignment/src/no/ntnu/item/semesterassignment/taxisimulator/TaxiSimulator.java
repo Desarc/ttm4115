@@ -2,6 +2,7 @@ package no.ntnu.item.semesterassignment.taxisimulator;
 
 import no.ntnu.item.arctis.runtime.Block;
 import no.ntnu.item.ttm4115.simulation.routeplanner.Journey;
+import no.ntnu.item.ttm4115.simulation.routeplanner.Leg;
 import no.ntnu.item.ttm4115.simulation.routeplanner.Route;
 
 import com.bitreactive.library.android.maps.model.MapUpdate;
@@ -23,7 +24,7 @@ public class TaxiSimulator extends Block {
 	}
 	
 	public Journey createJourney(TaxiPosition position) {
-		return new Journey(currentPosition, position.getPosition(), position.getTaxiId());
+		return new Journey(position.getTaxiId(), currentPosition, position.getPosition());
 	}
 
 	public void setPosition(MapUpdate newPosition) {
@@ -47,12 +48,12 @@ public class TaxiSimulator extends Block {
 	}
 
 	public Route readRoute(Route route) {
-//		for (Leg leg : route.legs) {
-//			System.out.println(leg.start_address+" => "+leg.end_address);
+		for (Leg leg : route.legs) {
+			System.out.println(leg.startAddress+" => "+leg.endAddress);
 //			for (Step step : leg.steps) {
 //				System.out.println(step.start_location.lat+","+step.start_location.lng+" => "+step.end_location.lat+","+step.end_location.lng);
 //			}
-//		}
+		}
 		return route;
 	}
 

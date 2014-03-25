@@ -31,15 +31,15 @@ public class UserClient extends Block {
 	
 	public TaxiMessage generateRequest(String address) {
 		System.out.println("Generating new request for taxi to "+address);
-		return new TaxiMessage(TaxiMessage.DISPATCHER, userId, TaxiMessage.taxiRequest, address, this.location);
+		return new TaxiMessage(TaxiMessage.DISPATCHER, userId, TaxiMessage.taxiRequest, this.location, address);
 	}
 
 	public String handleQueueNo(TaxiMessage message) {
-		return "You are number "+message.getData1()+" in the queue.";
+		return "You are number "+message.getQueueNumber()+" in the queue.";
 	}
 	
 	public String handleConfirm(TaxiMessage message) {
-		return "Taxi reserved! "+message.getData1()+" will pick you up shortly.";
+		return "Taxi reserved! "+message.getClientId()+" will pick you up shortly.";
 	}
 
 	public String taxiRequested(String address) {

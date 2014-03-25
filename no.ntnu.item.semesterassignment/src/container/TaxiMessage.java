@@ -19,12 +19,13 @@ public class TaxiMessage {
 	public static final String addToMap = "ADD_TO_MAP";				//data1: taxiId, data2: position
 	public static final String simulateTrip = "SIMULATE_TRIP";		//data1: taxiId, data2: destination
 	
-	String to;
-	String from;
-	String type;
-	String data1;
-	String data2;
-	String data3;
+	private String to;
+	private String from;
+	private String type;
+	private String fromAddress;
+	private String toAddress;
+	private String clientId;
+	private int queueNumber;
 	
 	public TaxiMessage(String to, String from, String type) {
 		this.to = to;
@@ -32,28 +33,35 @@ public class TaxiMessage {
 		this.type = type;
 	}
 	
-	public TaxiMessage(String to, String from, String type, String data1) {
+	public TaxiMessage(String to, String from, String type, String fromAddress) {
 		this.to = to;
 		this.from = from;
 		this.type = type;
-		this.data1 = data1;
+		this.fromAddress = fromAddress;
 	}
 	
-	public TaxiMessage(String to, String from, String type, String data1, String data2) {
+	public TaxiMessage(String to, String from, String type, int queueNumber) {
 		this.to = to;
 		this.from = from;
 		this.type = type;
-		this.data1 = data1;
-		this.data2 = data2;
+		this.queueNumber = queueNumber;
 	}
 	
-	public TaxiMessage(String to, String from, String type, String data1, String data2, String data3) {
+	public TaxiMessage(String to, String from, String type, String fromAddress, String toAddress) {
 		this.to = to;
 		this.from = from;
 		this.type = type;
-		this.data1 = data1;
-		this.data2 = data2;
-		this.data3 = data3;
+		this.fromAddress = fromAddress;
+		this.toAddress = toAddress;
+	}
+	
+	public TaxiMessage(String to, String from, String type, String clientId, String fromAddress, String toAddress) {
+		this.to = to;
+		this.from = from;
+		this.type = type;
+		this.clientId = clientId;
+		this.fromAddress = fromAddress;
+		this.toAddress = toAddress;
 	}
 	
 	public String getTo() {
@@ -72,28 +80,20 @@ public class TaxiMessage {
 		this.from = from;
 	}
 
-	public String getData1() {
-		return data1;
+	public String getFromAddress() {
+		return fromAddress;
 	}
 
-	public void setData1(String data1) {
-		this.data1 = data1;
-	}
-
-	public String getData2() {
-		return data2;
-	}
-
-	public void setData2(String data2) {
-		this.data2 = data2;
+	public String getToAddress() {
+		return toAddress;
 	}
 	
-	public String getData3() {
-		return data3;
+	public int getQueueNumber() {
+		return queueNumber;
 	}
 
-	public void setData3(String data3) {
-		this.data3 = data3;
+	public String getClientId() {
+		return clientId;
 	}
 
 	public String getType() {
